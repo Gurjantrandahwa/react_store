@@ -1,0 +1,40 @@
+$primary: #4649FF;
+$secondary: #0008C1;
+$buttonBg: #77ddf5;
+$buttonFont: #7705bc;
+
+
+.searchContact {
+  display: flex;
+  background-color: #F0EBCE;
+  padding: 30px;
+  margin-top: 120px;
+  border-top: 1px solid #cac49f;
+
+  h2 {
+    color: #005eff;
+    font-size: 35px;
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 450;
+    font-size: 18px;
+  }
+
+  .icons {
+    color: $buttonFont;
+    font-size: 35px;
+
+
+    svg {
+      padding-right: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    padding-left: 30px;
+  }
+}

@@ -1,6 +1,8 @@
 $primary: #4649FF;
 $secondary: #0008C1;
-
+header{
+ position: inherit!important;
+}
 .header {
   display: flex;
   background-color: $primary !important;
@@ -20,6 +22,7 @@ $secondary: #0008C1;
     object-fit: contain;
     cursor: pointer;
     background: white;
+    outline: none;
   }
 
 
@@ -72,7 +75,7 @@ $secondary: #0008C1;
   cursor: pointer;
   color: $secondary;
   background-color: aqua;
-transition: linear 0.2s ;
+  transition: linear 0.2s;
 
 }
 

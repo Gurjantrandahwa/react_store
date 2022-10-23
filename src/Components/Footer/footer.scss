@@ -1,0 +1,30 @@
+.footer {
+  background-color: #005eff;
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+
+  p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    li{
+      padding-right: 30px;
+      padding-top: 10px;
+    }
+  }
+
+  img {
+    width: 600px;
+    margin-top: 40px;
+  }
+}
