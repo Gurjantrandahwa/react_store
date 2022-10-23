@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+}
+
+.carousel-control.right {
+  background-image: none;
+  color: black;
+}
+
+.carousel-control.left {
+  background-image: none;
+  color: black;
+}
+
+.carousel-indicators .active {
+  background-color: #0008C1;
+}
+
+.carousel-indicators li {
+  border: 1px solid #0008C1;
+
+}
+
+.carousel-inner {
+  img {
+    width: 100% !important;
+    height: 450px !important;
+    object-fit: contain;
+  }
+}
+
+.homepage-text {
+  padding-left: 40px;
+  h1 {
+    font-size: 60px;
+    margin-top: 40px;
+
+    font-weight: 700;
+    color: #7705bc;
+
+    .purpose {
+      color: tomato;
+    }
+
+    .fit {
+      color: #00a284;
+    }
+  }
+
+}

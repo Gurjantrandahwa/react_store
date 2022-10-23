@@ -3,7 +3,7 @@ import {Container} from "@mui/material";
 import Header from "./Components/Headers/Header/Header";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Searchbar from "./Components/Headers/Searchbar/SearchBar/Searchbar";
-import Homepage from "./Components/Homepage/Homepage";
+import Homepage from "./Components/Homepage/Homepage/Homepage";
 
 function App() {
     return <BrowserRouter>

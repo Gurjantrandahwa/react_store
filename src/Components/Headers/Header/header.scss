@@ -1,8 +1,9 @@
 $primary: #4649FF;
 $secondary: #0008C1;
-header{
- position: inherit!important;
+header {
+  position: inherit !important;
 }
+
 .header {
   display: flex;
   background-color: $primary !important;
@@ -12,8 +13,8 @@ header{
   .logo-wrapper {
     display: flex;
     justify-content: space-between;
-    justify-items: center;
-    align-items: center;
+
+
   }
 
   .logo {
@@ -40,6 +41,7 @@ header{
     p {
       padding: 10px;
       font-size: 14px;
+      margin-top: 7px;
 
       span {
         text-decoration: underline;
