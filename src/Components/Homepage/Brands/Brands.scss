@@ -1,14 +1,45 @@
 .brands {
   margin-top: 100px;
   display: flex;
-  flex: 0 ;
-
-padding: 20px;
-  gap: 20px;
-
+  flex-wrap: wrap;
+  padding: 25px;
+  gap: 25px;
 
   img {
-    width: 250px;
+    width: 270px;
+    height: 270px;
+    object-fit: contain;
+    background-color: #f1efe4;
+    margin-bottom: 20px;
   }
 
+  .cards {
+    width: 270px;
+
+  }
+
+
+  .time{
+font-weight: 600;
+    svg{
+      margin-right: 10px;
+      font-size: 18px;
+    }
+display: flex;
+    align-items: center;
+  }
+  .date{
+    font-size: 14px;
+    color: gray;
+  }
+ h5{
+    color: #0008C1;
+   font-size: 20px;
+   font-weight: 700;
+  }
+  h5:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
+

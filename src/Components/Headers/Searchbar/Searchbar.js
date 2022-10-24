@@ -4,7 +4,7 @@ import {AppBar, Box, Button, Toolbar} from "@mui/material";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import {Link} from "react-router-dom";
 import SearchContact from "../SearchContact/SearchContact";
-import Footer from "../../../Footer/Footer";
+import Footer from "../../Footer/Footer";
 
 export default function Searchbar() {
     return <div className={"searchbar"}>

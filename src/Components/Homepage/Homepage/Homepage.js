@@ -1,6 +1,7 @@
 import React from "react";
 import "./homepage.scss";
 import Brands from "../Brands/Brands";
+import Trading from "../Trading/Trading";
 
 
 export default function Homepage() {
@@ -38,11 +39,13 @@ export default function Homepage() {
                 </div>
 
 
-                <a className="left carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel" data-slide="prev">
+                <a className="left carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel"
+                   data-slide="prev">
                     <span className="glyphicon glyphicon-chevron-left"></span>
                     <span className="sr-only">Previous</span>
                 </a>
-                <a className="right carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel" data-slide="next">
+                <a className="right carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel"
+                   data-slide="next">
                     <span className="glyphicon glyphicon-chevron-right"></span>
                     <span className="sr-only">Next</span>
                 </a>
@@ -57,6 +60,7 @@ export default function Homepage() {
         </div>
         {/*Other Components*/}
         <Brands/>
+        <Trading/>
     </div>
 
 }
