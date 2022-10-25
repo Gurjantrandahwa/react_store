@@ -10,9 +10,6 @@ export default function TakeAction() {
                 <span className={"color1"}>millions of people</span>
                 <span className={"color2"}> in 190 countries</span>
                 <span className={"color3"}> use our brands every day.</span>
-
-
-
             </h1>
             <Button>Explore the brands</Button>
             <Button className={"icon-button"}><ArrowRightIcon/></Button>

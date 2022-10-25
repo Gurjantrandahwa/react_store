@@ -6,6 +6,12 @@ import SharePrice from "../SharePrice/SharePrice";
 import News from "../News/News";
 import TakeAction from "../TakeAction/TakeAction";
 import IssuesOfWorld from "../IssuesOfWorld/IssuesOfWorld";
+import ShareIcon from '@mui/icons-material/Share';
+import {FaFacebookF} from "react-icons/fa";
+import {TiSocialTwitter} from "react-icons/ti";
+import {AiFillLinkedin, AiOutlineInstagram} from "react-icons/ai";
+import SearchContact from "../../Headers/SearchContact/SearchContact";
+import Footer from "../../Footer/Footer";
 
 
 export default function Homepage() {
@@ -63,12 +69,25 @@ export default function Homepage() {
             </h1>
         </div>
         {/*Other Homepage Components*/}
-        <Brands/>
-        <Trading/>
-        <SharePrice/>
-        <News/>
-        <TakeAction/>
-        <IssuesOfWorld/>
+
+        <div>
+            <Brands/>
+            <Trading/>
+            <SharePrice/>
+            <News/>
+            <TakeAction/>
+            <IssuesOfWorld/>
+            <div className={"social-icons"}>
+                <ShareIcon fontSize={"large"}/>Share this page
+                <FaFacebookF/>
+                <TiSocialTwitter/>
+                <AiFillLinkedin/>
+                <AiOutlineInstagram/>
+            </div>
+            <SearchContact/>
+            <Footer/>
+        </div>
+
     </div>
 
 }
