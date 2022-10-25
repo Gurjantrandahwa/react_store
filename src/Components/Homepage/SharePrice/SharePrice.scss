@@ -1,0 +1,64 @@
+.shares {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  flex-wrap: wrap;
+
+  .header-wrapper {
+    width: 250px;
+  }
+
+  h1 {
+    color: #005eff;
+    font-weight: 700;
+  }
+
+  h3 {
+    color: #73706e;
+    font-weight: 700;
+  }
+
+  h2 {
+    color: #005eff;
+    font-size: 35px;
+    font-weight: 750;
+  }
+
+  h4 {
+
+    color: #ff2828;
+    font-size: 30px;
+
+    svg {
+      margin-left: 5px;
+      font-weight: 700;
+      padding: 2px;
+    }
+
+  }
+
+  p {
+    font-size: 17px;
+    margin: 0 !important;
+
+  }
+
+  .share-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .ShareName {
+      width: 270px;
+    }
+
+  }
+
+  .date-time {
+    color: gray !important;
+    text-transform: uppercase;
+  }
+}
+
+.green {
+  color: #008000 !important;
+}

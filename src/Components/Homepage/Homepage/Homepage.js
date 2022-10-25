@@ -2,6 +2,10 @@ import React from "react";
 import "./homepage.scss";
 import Brands from "../Brands/Brands";
 import Trading from "../Trading/Trading";
+import SharePrice from "../SharePrice/SharePrice";
+import News from "../News/News";
+import TakeAction from "../TakeAction/TakeAction";
+import IssuesOfWorld from "../IssuesOfWorld/IssuesOfWorld";
 
 
 export default function Homepage() {
@@ -58,9 +62,13 @@ export default function Homepage() {
                 <span className={"fit"}>future-fit business</span><br/>
             </h1>
         </div>
-        {/*Other Components*/}
+        {/*Other Homepage Components*/}
         <Brands/>
         <Trading/>
+        <SharePrice/>
+        <News/>
+        <TakeAction/>
+        <IssuesOfWorld/>
     </div>
 
 }

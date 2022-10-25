@@ -19,25 +19,30 @@
   }
 
 
-  .time{
-font-weight: 600;
-    svg{
+  .time {
+    font-weight: 600;
+
+    svg {
       margin-right: 10px;
       font-size: 18px;
     }
-display: flex;
+
+    display: flex;
     align-items: center;
   }
-  .date{
+
+  .date {
     font-size: 14px;
     color: gray;
   }
- h5{
+
+  h5 {
     color: #0008C1;
-   font-size: 20px;
-   font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
   }
-  h5:hover{
+
+  h5:hover {
     text-decoration: underline;
     cursor: pointer;
   }
