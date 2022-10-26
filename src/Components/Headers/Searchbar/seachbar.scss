@@ -6,8 +6,6 @@ $buttonFont: #7705bc;
 
 .searchbar {
 
-
-
   a {
     text-decoration: none;
     color: white;
@@ -41,7 +39,7 @@ $buttonFont: #7705bc;
   }
 
   button {
-    padding: 11px 10px;
+    padding: 16px 15px 11px 15px;
     border: none;
     background-color: $buttonBg;
     color: $buttonFont;
@@ -54,6 +52,7 @@ $buttonFont: #7705bc;
     margin-right: 1px;
     transition: all ease-in-out;
     transition-duration: 0.4s;
+    margin-bottom: 6px;
   }
 
   button:hover {

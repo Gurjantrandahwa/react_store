@@ -5,14 +5,14 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 export default function TakeAction() {
     return <div className={"take-action"}>
-        <div>
+        <div className={"left"}>
             <h1>
                 <span className={"color1"}>millions of people</span>
                 <span className={"color2"}> in 190 countries</span>
                 <span className={"color3"}> use our brands every day.</span>
             </h1>
             <Button>Explore the brands</Button>
-            <Button className={"icon-button"}><ArrowRightIcon/></Button>
+            <Button ><ArrowRightIcon className={"icon-button"}/></Button>
         </div>
         <div className={"centre"}>
             <div className={"box"}>
@@ -24,7 +24,7 @@ export default function TakeAction() {
 
             </div>
         </div>
-        <div>
+        <div className={"take-action-right"}>
             <h1>
                 <span className={"color1"}> Ground-breaking innovations</span>
                 <span className={"color2"}> with more than</span>
@@ -33,7 +33,7 @@ export default function TakeAction() {
 
             </h1>
             <Button>Read our innovations</Button>
-            <Button className={"icon-button"}><ArrowRightIcon/></Button>
+            <Button ><ArrowRightIcon className={"icon-button"}/></Button>
         </div>
     </div>
 }

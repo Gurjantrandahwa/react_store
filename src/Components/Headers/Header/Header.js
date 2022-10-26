@@ -17,17 +17,17 @@ export default function Header() {
                     </Link>
 
                     <div className={"header-right"}>
-                        <div className={"location-wrapper"}>
-                            <PublicIcon/>
-                            <p>A Global Store {"  "}
-                                <span>
-                                   Change Location
-                               </span>
-                            </p>
-                        </div>
+                        <Link to={"/products"}>
+                            <div className={"location-wrapper"}>
+                                <PublicIcon/>
+                                <p>    Products</p>
+
+                            </div>
+                        </Link>
+
                         <Link to={"/searchbar"}>
                             <div className={"search-wrapper"}>
-                                <SearchIcon/><p>Search</p>
+                                <SearchIcon className={"icon-button"}/><p>Search</p>
                             </div>
                         </Link>
 

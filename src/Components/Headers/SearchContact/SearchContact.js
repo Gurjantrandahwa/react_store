@@ -27,7 +27,7 @@ export default function SearchContact() {
             </p>
             <Button>Contact us</Button>
             <IconButton>
-                <ArrowRightIcon/>
+                <ArrowRightIcon className={"icon-btn"}/>
             </IconButton>
         </div>
     </div>

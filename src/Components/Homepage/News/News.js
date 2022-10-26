@@ -59,7 +59,7 @@ export default function News() {
         </div>
         <div className={"button-container"}>
             <Button>View details</Button>
-            <Button className={"icon-button"}><ArrowRightIcon/></Button>
+            <Button ><ArrowRightIcon className={"icon-button"}/></Button>
         </div>
     </div>
 }

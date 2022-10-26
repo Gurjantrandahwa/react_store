@@ -6,16 +6,12 @@ import SharePrice from "../SharePrice/SharePrice";
 import News from "../News/News";
 import TakeAction from "../TakeAction/TakeAction";
 import IssuesOfWorld from "../IssuesOfWorld/IssuesOfWorld";
-import ShareIcon from '@mui/icons-material/Share';
-import {FaFacebookF} from "react-icons/fa";
-import {TiSocialTwitter} from "react-icons/ti";
-import {AiFillLinkedin, AiOutlineInstagram} from "react-icons/ai";
+
 import SearchContact from "../../Headers/SearchContact/SearchContact";
 import Footer from "../../Footer/Footer";
 
 
 export default function Homepage() {
-
     return <div>
         <div className="container">
 
@@ -49,14 +45,14 @@ export default function Homepage() {
                 </div>
 
 
-                <a className="left carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel"
+                <a className="left carousel-control" href="#myCarousel"
                    data-slide="prev">
-                    <span className="glyphicon glyphicon-chevron-left"></span>
+                    <span className="glyphicon glyphicon-chevron-left"/>
                     <span className="sr-only">Previous</span>
                 </a>
-                <a className="right carousel-control" href="src/Components/Homepage/Homepage/Homepage#myCarousel"
+                <a className="right carousel-control" href="#myCarousel"
                    data-slide="next">
-                    <span className="glyphicon glyphicon-chevron-right"></span>
+                    <span className="glyphicon glyphicon-chevron-right"/>
                     <span className="sr-only">Next</span>
                 </a>
             </div>
@@ -70,23 +66,16 @@ export default function Homepage() {
         </div>
         {/*Other Homepage Components*/}
 
-        <div>
             <Brands/>
             <Trading/>
             <SharePrice/>
             <News/>
             <TakeAction/>
             <IssuesOfWorld/>
-            <div className={"social-icons"}>
-                <ShareIcon fontSize={"large"}/>Share this page
-                <FaFacebookF/>
-                <TiSocialTwitter/>
-                <AiFillLinkedin/>
-                <AiOutlineInstagram/>
-            </div>
+
             <SearchContact/>
             <Footer/>
-        </div>
+
 
     </div>
 

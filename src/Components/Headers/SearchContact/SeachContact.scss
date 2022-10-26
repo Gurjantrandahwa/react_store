@@ -7,7 +7,7 @@ $buttonFont: #7705bc;
 .searchContact {
   display: flex;
   background-color: #F0EBCE;
-  padding: 30px;
+  padding: 40px;
   margin-top: 120px;
   border-top: 1px solid #cac49f;
 
@@ -29,12 +29,40 @@ $buttonFont: #7705bc;
 
 
     svg {
-      padding-right: 20px;
+      margin-right: 20px;
       cursor: pointer;
     }
   }
 
   .right {
     padding-left: 30px;
+
+    .icon-btn {
+      font-size: 28px;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: $buttonFont;
+      color: $buttonBg;
+
+      letter-spacing: 0.10px;
+      font-size: 16px;
+      cursor: pointer;
+      text-transform: none !important;
+      border-radius: inherit;
+      margin-right: 1px;
+      transition: all ease-in-out;
+      transition-duration: 0.3s;
+
+
+    }
+
+    button:hover {
+      background-color: #e3a607 !important;
+    color: black;
+
+    }
   }
+
 }

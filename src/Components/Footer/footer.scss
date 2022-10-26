@@ -4,11 +4,13 @@
   color: white;
   display: flex;
   justify-content: space-between;
+  font-size: 17px;
 
 
   p {
     margin-top: 30px;
     margin-bottom: 30px;
+
   }
 
   ul {
@@ -20,11 +22,12 @@
     li{
       padding-right: 30px;
       padding-top: 10px;
+text-decoration: underline;
     }
   }
 
   img {
-    width: 600px;
+    max-width: 100%;
     margin-top: 40px;
   }
 }

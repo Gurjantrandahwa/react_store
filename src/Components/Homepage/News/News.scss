@@ -107,7 +107,7 @@ $buttonFont: #7705bc;
       border: none;
       background-color: $buttonFont;
       color: $buttonBg;
-      font-weight: 700;
+
       letter-spacing: 0.10px;
       font-size: 16px;
       cursor: pointer;
@@ -117,6 +117,7 @@ $buttonFont: #7705bc;
       transition: all ease-in-out;
       transition-duration: 0.3s;
       margin-top: 20px;
+
     }
 
     button:hover {
@@ -126,7 +127,7 @@ $buttonFont: #7705bc;
     }
 
     .icon-button {
-      padding: 17px;
+  font-size: 24px;
     }
   }
 
