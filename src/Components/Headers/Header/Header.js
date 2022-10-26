@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import img from "./img.png"
 import {AppBar, Box} from "@mui/material";
 import "./header.scss";
@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 
 
 export default function Header() {
+
     return <div>
         <Box sx={{flexGrow: 1}}>
             <AppBar className={"header"}>
@@ -19,9 +20,8 @@ export default function Header() {
                     <div className={"header-right"}>
                         <Link to={"/products"}>
                             <div className={"location-wrapper"}>
-                                <PublicIcon/>
-                                <p>    Products</p>
-
+                                <PublicIcon fontSize={"large"}/>
+                                <p>Products</p>
                             </div>
                         </Link>
 
