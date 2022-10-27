@@ -94,7 +94,14 @@ $secondary: #0008C1;
     font-size: 24px !important;
   }
 
+
+
 }
+.world::-webkit-scrollbar {
+  display: none!important;
+}
+
+
 
 .social-icons {
   padding: 25px 20px;

@@ -8,6 +8,9 @@ import {TiSocialTwitter} from "react-icons/ti";
 import {AiFillLinkedin, AiOutlineInstagram} from "react-icons/ai";
 
 export default function IssuesOfWorld() {
+    const handleForward=()=>{
+        window.scroll(100,100);
+    }
     return<div>
         <div className={"world"}>
             <h1>
@@ -63,7 +66,7 @@ export default function IssuesOfWorld() {
             </div>
             <div className={"world-buttons"}>
                 <Button  startIcon={<ArrowLeft />} >Previous</Button>
-                <Button endIcon={<ArrowRight/>}>Next</Button>
+                <Button endIcon={<ArrowRight/>} onClick={handleForward}>Next</Button>
             </div>
 
         </div>
