@@ -18,8 +18,13 @@ export default function Header() {
                     </Link>
 
                     <div className={"header-right"}>
+                        <Link to={"/login"}>
+                            <p>Login</p>
+                        </Link>
+
                         <Link to={"/products"}>
                             <div className={"location-wrapper"}>
+
                                 <PublicIcon fontSize={"large"}/>
                                 <p>Products</p>
                             </div>
