@@ -2,12 +2,13 @@ import React, {useEffect, useState} from "react";
 import "./products.scss";
 
 export default function Products() {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([])
     const productsAPi = async () => {
         try {
             const res = await fetch("https://fakestoreapi.com/products");
             const data = await res.json()
+            setLoading(false)
             setProducts(data)
             console.log(data)
 
@@ -21,14 +22,18 @@ export default function Products() {
         });
     }, [])
 
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    return <div className={"products-container"}>
 
-    return <div>
         <h1>Products</h1>
         {products.map((value,index) => {
             return<div key={index} className={"products"}>
                 <img src={value.image} width={200} alt={""}/>
-                <h3>{value.category}</h3>
-                <h4>{value.title}</h4>
+                <h4>Category:{" "}{value.category}</h4>
+                <h5>Price:{" "}<span style={{color:"red"}}>${value.price}</span></h5>
+                <p className={"products-title"}>{value.title}</p>
             </div>
         })}
     </div>

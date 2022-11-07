@@ -1,7 +1,18 @@
-.products{
-  display: inline-flex;
-  flex-wrap: wrap;
-  width: 300px;
-  flex-direction: column;
-padding: 10px;
+.products-container{
+  h1{
+    color: #0008C1;
+    font-weight: 700;
+  }
+  .products{
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 300px;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+    .products-title{
+      color: #5f5858;
+      font-size: 14px;
+    }
+  }
 }

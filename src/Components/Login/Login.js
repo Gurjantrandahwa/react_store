@@ -2,8 +2,7 @@ import React from "react";
 import {useFormik} from "formik";
 import * as Yup from 'yup';
 import "./login.scss";
-import img from "../Headers/Header/img.png";
-import {Alert, Box, Button, Container, TextField, Typography} from "@mui/material";
+import {Box, Button, Container, TextField, Typography} from "@mui/material";
 
 export default function Login() {
     const formik = useFormik({
@@ -26,7 +25,7 @@ export default function Login() {
             alert(JSON.stringify(values));
         }
     });
-    return <>
+    return <div className={"login"}>
         <Box component={"main"}
              sx={{
                  alignItems: "center",
@@ -36,9 +35,7 @@ export default function Login() {
              }}>
             <Container maxWidth={"sm"}>
                 <form onSubmit={formik.handleSubmit}>
-                    <Box sx={{my: 3}} justifyContent={"centre"} display={"flex"}>
-                        <img src={img} width={200} alt={""}/>
-                    </Box>
+
                     <Box
                         sx={{
                             pb: 1,
@@ -48,7 +45,7 @@ export default function Login() {
                         <Typography
                             align="center"
                             color="textSecondary"
-                            variant="body1"
+                            variant="h4"
                         >
                             Please sign in to continue
                         </Typography>
@@ -65,8 +62,22 @@ export default function Login() {
                         type="email"
                         value={formik.values.email}
                         variant="outlined"/>
+
+                    <TextField
+                        fullWidth
+                        label="Password"
+                        helperText={formik.touched.password && formik.errors.password}
+                        error={Boolean(formik.touched.password && formik.errors.password)}
+                        margin="normal"
+                        name="password"
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
+                        type="password"
+                        value={formik.values.password}
+                        variant="outlined"/>
+                    <Button fullWidth variant={"contained"}>Submit</Button>
                 </form>
             </Container>
         </Box>
-    </>
+    </div>
 }
