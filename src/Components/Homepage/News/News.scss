@@ -29,7 +29,7 @@ $buttonFont: #7705bc;
   }
 
   .left-img {
-    width: 500px;
+    width: 100%;
     object-fit: cover;
     display: flex;
     margin: auto;
@@ -127,7 +127,7 @@ $buttonFont: #7705bc;
     }
 
     .icon-button {
-  font-size: 24px;
+      font-size: 24px;
     }
   }
 
