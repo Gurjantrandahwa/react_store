@@ -1,0 +1,25 @@
+.features-wrapper {
+  padding: 5rem 0;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+flex-wrap: wrap;
+  .single-feature {
+    width: 250px;
+    height: 300px;
+  }
+
+  h3 {
+    font-size: 17px;
+    margin-top: 5px;
+    color: mediumvioletred;
+  }
+
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+}

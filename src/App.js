@@ -1,5 +1,3 @@
-
-import {Container} from "@mui/material";
 import Header from "./Components/Header/Header";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage";
@@ -13,8 +11,6 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
     return <BrowserRouter>
-
-
         <Header/>
         <Routes>
             <Route path={"/"} element={<Homepage/>}/>
@@ -23,7 +19,7 @@ function App() {
             <Route path={"/contact"} element={<Contact/>}/>
             <Route path={"/singleProduct/:id"} element={<SingleProduct/>}/>
             <Route path={"/cart"} element={<Cart/>}/>
-            {/*<Route path={"/login"} element={<Login/>}/>*/}
+            <Route path={"/login"} element={<Login/>}/>
             <Route path="*" element={<ErrorPage/>}/>
 
         </Routes>

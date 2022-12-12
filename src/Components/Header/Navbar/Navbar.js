@@ -1,14 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import "./navbar.scss";
 import {NavLink} from "react-router-dom";
 import {FiShoppingCart} from "react-icons/fi";
 import {CgClose, CgMenu} from "react-icons/cg";
+import {Button} from "@mui/material";
 
 export default function Navbar() {
-    return <nav>
+    const [menuIcon, setMenuIcon] = useState()
+    return    <div className={menuIcon ? "navbar active" : "navbar"}>
 
-        <div className={"navbar active"}>
-            <ul className={"nav-lists"}>
+            <ul className={"nav-lists"}  onClick={()=>setMenuIcon(false)}>
                 <li>
                     <NavLink to={"/"}>
                         Home
@@ -30,6 +31,11 @@ export default function Navbar() {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink to={"/login"}>
+                        <Button variant={"contained"}>Login</Button>
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to={"/cart"} className={"cart-link"}>
                         <FiShoppingCart className={"cart-trolley"}/>
                         <span className={"cart-value"}>10</span>
@@ -38,10 +44,13 @@ export default function Navbar() {
             </ul>
 
             {/*mobile*/}
-            <div className={"mobile-navbar-icon"}>
-                <CgMenu name={"menu-outline"} className={"menu-icon"}/>
-                <CgClose name={"close-outline"} className={"menu-icon close-icon"}/>
+            <div className={"mobile-navbar-btn"}>
+                <CgMenu name={"menu-outline"} className={"menu-icon"}
+                        onClick={()=>setMenuIcon(true)}/>
+                <CgClose name={"close-outline"}
+                         className={"menu-icon close-icon"}
+                         onClick={()=>setMenuIcon(false)}/>
             </div>
         </div>
-    </nav>
+
 }

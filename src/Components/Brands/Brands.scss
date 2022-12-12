@@ -1,0 +1,25 @@
+.brand {
+  background-color: #f1edff;
+  text-align: center;
+  padding: 3rem 5rem;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+
+  h3 {
+    color: mediumvioletred;
+  }
+
+  .brands-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    margin-top: 2rem;
+
+    img {
+      width: 100px;
+      height: 40px;
+      object-fit: cover;
+    }
+  }
+}

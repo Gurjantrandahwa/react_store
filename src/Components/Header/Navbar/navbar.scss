@@ -3,22 +3,22 @@
 
   .nav-lists {
     display: flex;
-    gap: 4.8rem;
+    gap: 2.5rem;
     align-items: center;
     list-style: none;
-    margin-top: 20px;
 
     li {
       display: inline-block;
       text-decoration: none;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       font-weight: 500;
       text-transform: uppercase;
       transition: color 0.3s linear;
 
       :hover {
         text-decoration: none;
-        color: red
+        color: red;
+        transition: color 0.3s linear;
       }
 
       :focus {
@@ -33,12 +33,12 @@
 
     .cart-trolley {
       position: relative;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
 
     .cart-value {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
       position: absolute;
       background-color: #000;
       color: white;
@@ -51,40 +51,11 @@
     }
   }
 }
-.active .mobile-navbar-icon {
-  display: none;
-  font-size: 4rem;
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  color: black;
-  z-index: 9999;
-  .nav-lists{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 3s linear;
-  }
 
-}
-
-.active .close-icon{
-  display: inline-block;
-}
 // mobile navbar
 
-.mobile-navbar-icon {
+.mobile-navbar-btn {
   display: none;
   background-color: transparent;
   cursor: pointer;
@@ -99,16 +70,58 @@
   }
 }
 
+//Active
+
 @media screen and (max-width: 768px) {
-  .mobile-navbar-icon{
+  .mobile-navbar-btn {
     display: inline-block;
     z-index: 9999;
     border: black;
 
   }
   .menu-icon {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: black;
-  }
 
+  }
+  .active .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    color: black;
+    z-index: 9999;
+
+  }
+  .active .close-icon {
+    display: inline-block;
+  }
+  .nav-lists {
+    width: 100vw;
+    height: 100vh;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 2s linear;
+  }
+  .active .nav-lists {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+    z-index: 999;
+    transform-origin: left !important;
+    transition: all 2s linear;
+  }
+  li {
+    font-size: 1.8rem;
+  }
 }

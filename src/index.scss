@@ -1,22 +1,67 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Work Sans",sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
-html{
-  font-size: 62.5%;
-  overflow: hidden;
+html {
+  overflow-x: hidden;
   line-height: 1.5;
 }
+
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+}
+
+li {
+  list-style: none;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  //scrollbar-color: rgb(98 84 243);
+  //scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+
+  background: #fff;
+  border: 5px solid transparent;
+  border-radius: 9px;
+  background-clip: content-box;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(24 24 29);
+}
+p, button {
+  color:black;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column {
+  grid-template-columns: 1fr 1.2fr .5fr .8fr;
+}
+
+.grid-five-column {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 
