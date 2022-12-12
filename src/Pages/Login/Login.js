@@ -26,20 +26,20 @@ export default function Login() {
         }
     });
     return <div className={"login"}>
-        <Box component={"main"}
+        <Box
              sx={{
-                 alignItems: "center",
-                 display: "flex",
-                 flexGrow: 1,
-                 minHeight: "100%"
+                 // alignItems: "center",
+                 // display: "flex",
+                 // flexGrow: 1,
+                 // minHeight: "100%"
              }}>
             <Container maxWidth={"sm"}>
                 <form onSubmit={formik.handleSubmit}>
 
                     <Box
                         sx={{
-                            pb: 1,
-                            pt: 3
+                            // pb: 1,
+                            // pt: 3
                         }}
                     >
                         <Typography
@@ -52,28 +52,28 @@ export default function Login() {
                     </Box>
                     <TextField
                         fullWidth
-                        label="Email Address"
-                        helperText={formik.touched.email && formik.errors.email}
-                        error={Boolean(formik.touched.email && formik.errors.email)}
-                        margin="normal"
-                        name="email"
-                        onBlur={formik.handleBlur}
-                        onChange={formik.handleChange}
-                        type="email"
-                        value={formik.values.email}
+                        // label="Email Address"
+                        // helperText={formik.touched.email && formik.errors.email}
+                        // error={Boolean(formik.touched.email && formik.errors.email)}
+                        //
+                        // name="email"
+                        // onBlur={formik.handleBlur}
+                        // onChange={formik.handleChange}
+                        // type="email"
+                        // value={formik.values.email}
                         variant="outlined"/>
 
                     <TextField
                         fullWidth
-                        label="Password"
-                        helperText={formik.touched.password && formik.errors.password}
-                        error={Boolean(formik.touched.password && formik.errors.password)}
-                        margin="normal"
-                        name="password"
-                        onBlur={formik.handleBlur}
-                        onChange={formik.handleChange}
-                        type="password"
-                        value={formik.values.password}
+                        // label="Password"
+                        // helperText={formik.touched.password && formik.errors.password}
+                        // error={Boolean(formik.touched.password && formik.errors.password)}
+                        // margin="normal"
+                        // name="password"
+                        // onBlur={formik.handleBlur}
+                        // onChange={formik.handleChange}
+                        // type="password"
+                        // value={formik.values.password}
                         variant="outlined"/>
                     <Button fullWidth variant={"contained"}>Submit</Button>
                 </form>

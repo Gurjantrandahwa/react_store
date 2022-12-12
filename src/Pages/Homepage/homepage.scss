@@ -1,5 +1,6 @@
-.container {
+.h-container {
   width: 100%;
+  margin-top: 100px;
 }
 
 .carousel-control.right {
@@ -24,28 +25,12 @@
 .carousel-inner {
   img {
     width: 100% !important;
-    height: 450px !important;
+    height: 300px !important;
     object-fit: contain;
   }
 }
 
-.homepage-text {
-  padding-left: 40px;
-  h1 {
-    font-size: 60px;
-    margin-top: 40px;
 
-    font-weight: 700;
-    color: #7705bc;
 
-    .purpose {
-      color: tomato;
-    }
 
-    .fit {
-      color: #00a284;
-    }
-  }
-
-}
 

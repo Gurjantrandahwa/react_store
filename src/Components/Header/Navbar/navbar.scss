@@ -1,0 +1,114 @@
+.navbar {
+
+
+  .nav-lists {
+    display: flex;
+    gap: 4.8rem;
+    align-items: center;
+    list-style: none;
+    margin-top: 20px;
+
+    li {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: color 0.3s linear;
+
+      :hover {
+        text-decoration: none;
+        color: red
+      }
+
+      :focus {
+        color: red !important;
+      }
+    }
+
+  }
+
+  .cart-link {
+    position: relative;
+
+    .cart-trolley {
+      position: relative;
+      font-size: 2.5rem;
+    }
+
+    .cart-value {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: absolute;
+      background-color: #000;
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      top: -100%;
+      left: 70%;
+
+    }
+  }
+}
+.active .mobile-navbar-icon {
+  display: none;
+  font-size: 4rem;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  color: black;
+  z-index: 9999;
+  .nav-lists{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 3s linear;
+  }
+
+}
+
+.active .close-icon{
+  display: inline-block;
+}
+// mobile navbar
+
+.mobile-navbar-icon {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  .menu-icon [name="close-outline"] {
+    display: none;
+  }
+
+  .close-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-navbar-icon{
+    display: inline-block;
+    z-index: 9999;
+    border: black;
+
+  }
+  .menu-icon {
+    font-size: 2.2rem;
+    color: black;
+  }
+
+}

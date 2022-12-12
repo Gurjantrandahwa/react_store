@@ -1,27 +1,34 @@
-import './App.scss';
+
 import {Container} from "@mui/material";
-import Header from "./Components/Headers/Header/Header";
+import Header from "./Components/Header/Header";
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
-import Searchbar from "./Components/Headers/Searchbar/Searchbar";
-import Homepage from "./Components/Homepage/Homepage/Homepage";
-import Products from "./Components/Products/Products";
-import Login from "./Components/Login/Login";
+import Homepage from "./Pages/Homepage/Homepage";
+import Products from "./Pages/Products/Products";
+import Login from "./Pages/Login/Login";
+import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
+import SingleProduct from "./Pages/SigleProduct/SingleProduct";
+import Cart from "./Pages/Cart/Cart";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
     return <BrowserRouter>
 
-        <Container maxWidth={"xl"}>
-            <Header/>
-            <Routes>
-                <Route path={"/"} element={<Homepage/>}/>
-                <Route path={"/searchbar"} element={<Searchbar/>}/>
-                <Route path={"/products"} element={<Products/>}/>
-                <Route path={"/login"} element={<Login/>}/>
-                <Route path="*" element={<Navigate to={"/"}/>}/>
 
-            </Routes>
+        <Header/>
+        <Routes>
+            <Route path={"/"} element={<Homepage/>}/>
+            <Route path={"/about"} element={<About/>}/>
+            <Route path={"/products"} element={<Products/>}/>
+            <Route path={"/contact"} element={<Contact/>}/>
+            <Route path={"/singleProduct/:id"} element={<SingleProduct/>}/>
+            <Route path={"/cart"} element={<Cart/>}/>
+            {/*<Route path={"/login"} element={<Login/>}/>*/}
+            <Route path="*" element={<ErrorPage/>}/>
 
-        </Container>
+        </Routes>
+
+
     </BrowserRouter>
 }
 

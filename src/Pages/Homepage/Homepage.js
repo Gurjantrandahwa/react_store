@@ -1,19 +1,11 @@
 import React from "react";
 import "./homepage.scss";
-import Brands from "../Brands/Brands";
-import Trading from "../Trading/Trading";
-import SharePrice from "../SharePrice/SharePrice";
-import News from "../News/News";
-import TakeAction from "../TakeAction/TakeAction";
-import IssuesOfWorld from "../IssuesOfWorld/IssuesOfWorld";
 
-import SearchContact from "../../Headers/SearchContact/SearchContact";
-import Footer from "../../Footer/Footer";
 
 
 export default function Homepage() {
     return <div>
-        <div className="container">
+        <div className="h-container">
 
             <div id="myCarousel" className="carousel slide" data-ride="carousel">
 
@@ -26,20 +18,20 @@ export default function Homepage() {
                 <div className="carousel-inner">
                     <div className="item active">
                         <img
-                            src="https://1.bp.blogspot.com/-K_jC5oCj858/VkQYD-Z8yEI/AAAAAAAADtE/9BkiG291RuE/s1600/Askme+grocery+coupon+offer.png"
+                            src="https://img.freepik.com/free-vector/shopping-time-banner-with-realistic-map-cart-gift-bags-vector-illustration_548887-120.jpg?w=2000"
                             alt="Los Angeles"
                         />
                     </div>
 
                     <div className="item">
                         <img
-                            src="https://cdn11.bigcommerce.com/s-twicn3dmhk/product_images/uploaded_images/deli-4-you-banner.jpg"
+                            src="https://i.pinimg.com/564x/b6/71/21/b671214b9f63fc59eb5ef78a530c2d7d.jpg"
                             alt="Chicago"
                         />
                     </div>
 
                     <div className="item">
-                        <img src="https://www.blogoval.com/wp-content/uploads/2021/01/online-grocery-shopping-2.png"
+                        <img src="https://i.pinimg.com/564x/41/b2/06/41b206bc257d0079c9f02ce41d306c82.jpg"
                              alt="New york"/>
                     </div>
                 </div>
@@ -57,24 +49,6 @@ export default function Homepage() {
                 </a>
             </div>
         </div>
-        <div className={"homepage-text"}>
-            <h1>
-                <span>Driving superior performance</span><br/>
-                <span className={"purpose"}>with our purpose-led,</span><br/>
-                <span className={"fit"}>future-fit business</span><br/>
-            </h1>
-        </div>
-        {/*Other Homepage Components*/}
-
-            <Brands/>
-            <Trading/>
-            <SharePrice/>
-            <News/>
-            <TakeAction/>
-            <IssuesOfWorld/>
-
-            <SearchContact/>
-            <Footer/>
 
 
     </div>
