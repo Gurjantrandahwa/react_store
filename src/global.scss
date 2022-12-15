@@ -1,11 +1,4 @@
 
-.common-heading {
-  font-size: 3.8rem;
-  font-weight: 600;
-  margin-bottom: 6rem;
-  text-transform: capitalize;
-}
-
 
 .caption {
   position: absolute;
@@ -39,8 +32,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-.grid-two-column, .grid-three-column, .grid-four-column {
-  grid-template-columns: 1fr;
-}
+
 
 
