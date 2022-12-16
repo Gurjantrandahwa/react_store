@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact/Contact";
 import SingleProduct from "./Pages/SigleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
     return <BrowserRouter>
@@ -23,7 +24,7 @@ function App() {
             <Route path="*" element={<ErrorPage/>}/>
 
         </Routes>
-
+        <Footer/>
 
     </BrowserRouter>
 }

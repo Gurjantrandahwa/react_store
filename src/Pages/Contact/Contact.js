@@ -21,7 +21,7 @@ export default function Contact() {
                     <div>
                         <TextField
                             margin={"normal"}
-                            sx={{width: "35%", marginBottom: "20px"}}
+                            sx={{width: "100%", marginBottom: "20px"}}
                             size={"small"}
                             type={"text"}
                             placeholder={"Username"}
@@ -34,7 +34,7 @@ export default function Contact() {
                     </div>
                     <div>
                         <TextField
-                            sx={{width: "35%", marginBottom: "20px"}}
+                            sx={{width: "100%", marginBottom: "20px"}}
                             size={"small"}
                             type={"email"}
                             placeholder={"Email"}
@@ -42,13 +42,12 @@ export default function Contact() {
                             required
                             autoComplete={"off"}
                             variant={"outlined"}
-
                         />
                     </div>
                     <div>
                         <TextField
                             multiline
-                            sx={{width: "35%", marginBottom: "20px"}}
+                            sx={{width: "100%", marginBottom: "20px"}}
                             placeholder={"Enter your message"}
                             cols={"59"}
                             minRows={"8"}
@@ -64,7 +63,7 @@ export default function Contact() {
                         value={"send"}
 
                         type={"submit"}
-                        sx={{width: "35%", marginBottom: "20px",bgcolor:"maroon"}}
+                        sx={{width: "100%", marginBottom: "20px",bgcolor:"maroon"}}
                     >
                         Send
                     </Button>
