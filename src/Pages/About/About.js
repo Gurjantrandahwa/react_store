@@ -8,7 +8,7 @@ export default function About() {
         image: "https://i.pinimg.com/564x/81/ed/c1/81edc189669ddc3a9f9febdb5896978b.jpg"
     }
 
-    return<div>
+    return<div style={{marginBottom:"100px"}}>
         <HeroSection myData={data} />
     </div>
 }

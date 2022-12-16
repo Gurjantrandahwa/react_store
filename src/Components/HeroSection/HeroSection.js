@@ -15,7 +15,10 @@ export default function HeroSection({myData}) {
                     previewing layouts and visual mockups.
                 </p>
                 <NavLink to={"/products"}>
-                    <Button variant={"contained"} color={"error"}>
+                    <Button variant={"contained"}
+                    sx={{
+                        backgroundColor:"orangered"
+                    }}>
                         Shop now
                     </Button>
                 </NavLink>

@@ -32,7 +32,10 @@ export default function Navbar() {
                 </li>
                 <li>
                     <NavLink to={"/login"}>
-                        <Button variant={"contained"}>Login</Button>
+                        <Button size={"small"}
+                                sx={{backgroundColor:"orangered",
+                                textTransform:"none"}}
+                                variant={"contained"}>Login</Button>
                     </NavLink>
                 </li>
                 <li>
