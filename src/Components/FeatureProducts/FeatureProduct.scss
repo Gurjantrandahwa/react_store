@@ -1,3 +1,21 @@
-.features-products{
+.loader{
   display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 3rem 6rem;
+}
+
+.feature-container{
+  padding: 3rem 6rem;
+  .features-products{
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    img{
+      width: 200px;
+
+    }
+  }
 }
