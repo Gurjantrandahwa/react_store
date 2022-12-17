@@ -2,6 +2,7 @@ import React from "react";
 import "./FeatureProduct.scss";
 import {useProductContext} from "../../Common/Context/productContext";
 import {CircularProgress, Typography} from "@mui/material";
+import Product from "./Product";
 
 
 export default function FeatureProducts() {
@@ -13,15 +14,15 @@ export default function FeatureProducts() {
         </div>
     }
     return <div className={"container feature-container"}>
-        <Typography variant={"caption"}>
+        <Typography variant={"h5"} sx={{
+            marginBottom: "30px", textAlign: "center",
+        }}>
             Our Features Products
         </Typography>
         <div className={"features-products"}>
 
-            {featureProducts.map((value, index) => {
-                return <div key={index}>
-                    <img src={value.image} alt={"feature"} width={200}/>
-                </div>
+            {featureProducts.map((current) => {
+                return <Product key={current.id} {...current}/>
             })}
         </div>
     </div>
