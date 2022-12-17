@@ -1,6 +1,6 @@
 .footer {
   background-color: #dc8787;
-  padding-bottom: 3rem;
+  //padding-bottom: 3rem;
 
   .short-note {
     max-width: 60vw;
@@ -103,5 +103,10 @@
 
   .line {
     border-top: 0.1rem solid #310a33;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer{
+    display: none;
   }
 }
