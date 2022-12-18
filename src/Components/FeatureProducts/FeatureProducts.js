@@ -7,7 +7,6 @@ import Product from "./Product";
 
 export default function FeatureProducts() {
     const {isLoading, featureProducts} = useProductContext();
-    console.log("feature", featureProducts)
     if (isLoading) {
         return <div className={"loader"}>
             <CircularProgress color="secondary"/>

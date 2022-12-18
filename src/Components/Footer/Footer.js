@@ -27,6 +27,7 @@ export default function Footer() {
                 <form action={"#"}>
                     <TextField
                         size={"small"}
+                        autoComplete={"off"}
                         margin={"dense"}
                         type={"email"}
                         placeholder={"Your e-mail"}/>

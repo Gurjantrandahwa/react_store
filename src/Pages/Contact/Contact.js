@@ -13,7 +13,7 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade">
         </iframe>
 
-        <div className={"container"}>
+        <div className={"form-container"}>
             <div className={"contact-form"}>
 
                 {/*<Formik>*/}
@@ -50,7 +50,7 @@ export default function Contact() {
                             sx={{width: "100%", marginBottom: "20px"}}
                             placeholder={"Enter your message"}
                             cols={"59"}
-                            minRows={"8"}
+                            minRows={"6"}
                             autoComplete={"off"}
                             name={"Message"}
                             required

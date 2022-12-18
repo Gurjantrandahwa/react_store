@@ -9,7 +9,7 @@
 .feature-container {
   padding: 3rem 6rem;
   background-color: #dc8787;
-  margin-top: 30px;
+  margin-top: 60px;
 
   .features-products {
     display: flex;
@@ -19,25 +19,48 @@
 
     img {
       width: 230px;
+height: 180px;
+      object-fit: cover;
+    }
+    img:hover{
+        -webkit-animation: flash 3s;
+        animation: flash 3s;
+
+
     }
   }
 }
-
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .card {
   background-color: #fed4d4;
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
   border-radius: 10px;
 
   .card-category {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 0;
     background-color: #310a33;
     color: white;
-    padding: 3px;
-
-
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
   }
 
   .card-data {
@@ -46,9 +69,11 @@
     justify-content: space-between;
     text-transform: capitalize;
     align-items: center;
+    padding: 0 10px;
 
     p {
       font-size: 14px;
     }
   }
+
 }

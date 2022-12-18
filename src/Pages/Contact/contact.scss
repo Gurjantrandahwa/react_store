@@ -1,7 +1,11 @@
 .contact{
   padding: 3rem 0 5rem 0;
   text-align: center;
-
+  .form-container{
+max-width: 500px;
+    justify-content: center;
+    margin: auto;
+  }
   h3{
     font-size: 1.8rem;
     font-weight: 600;
