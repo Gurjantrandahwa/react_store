@@ -5,7 +5,7 @@ import Products from "./Pages/Products/Products";
 import Login from "./Pages/Login/Login";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
-import SingleProduct from "./Pages/SigleProduct/SingleProduct";
+import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Footer from "./Components/Footer/Footer";

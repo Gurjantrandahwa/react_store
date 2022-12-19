@@ -27,11 +27,12 @@
   .hero-img{
 
     img{
-      max-width: 80%;
+      width: 80%;
       place-items: center;
       justify-content: center;
       margin: auto;
       display: flex;
+
     }
   }
 }
@@ -42,6 +43,7 @@
     flex-wrap: wrap;
     align-items: center;
     place-items: center;
+
   }
 
 }

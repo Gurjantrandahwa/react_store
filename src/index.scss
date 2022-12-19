@@ -64,6 +64,13 @@ p, button {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.loader {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding: 3rem 6rem;
+
+}
 
 button:hover{
   background-color: mediumvioletred;
