@@ -7,7 +7,7 @@ import Navbar from "./Navbar/Navbar";
 export default function Header() {
     return <div className={"header"}>
     <NavLink to={"/"}>
-        <img src={"https://i.pinimg.com/564x/78/9e/89/789e89d2418c4b1a4190627eda0db1cc.jpg"}
+        <img src={"https://i.pinimg.com/564x/be/05/07/be050733fe44a12d59275625bb17a87a.jpg"}
              className={"logo"}
              alt={"logo"}/>
     </NavLink>
