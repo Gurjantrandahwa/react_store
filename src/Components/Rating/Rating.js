@@ -23,9 +23,8 @@ const Rating = ({stars, reviews}) => {
         <Typography
             sx={{alignItems: "center", display: "flex", gap: "10px"}}>
             {ratingStar}
-            <Typography color={"gray"} variant={"inherit"}>
+
                 ({reviews} customers review)
-            </Typography>
         </Typography>
     </div>
 }

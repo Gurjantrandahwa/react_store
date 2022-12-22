@@ -8,7 +8,7 @@ import {TbReplace, TbTruckDelivery} from "react-icons/tb";
 import {MdOutlineDeliveryDining, MdSecurity} from "react-icons/md";
 import Images from "../../Components/Images/Images";
 import Rating from "../../Components/Rating/Rating";
-
+import AddToCart from "../../Components/AddToCart/AddToCart";
 
 export default function SingleProduct() {
     const {getSingleProduct, isLoading, singleProduct} = useProductContext();
@@ -99,19 +99,27 @@ export default function SingleProduct() {
                             }))
                         }
                     </div>
-                    <hr/>
+                    <hr className={"line"}/>
                     <div className={"stock"}>
-                        <Typography variant={"inherit"}>
+                        <Typography variant={"body1"} color={"mediumvioletred"}>
                             Available: {stock > 0 ? "In Stock" : "Not Available"}
                         </Typography>
-                        <Typography variant={"inherit"}>
+                        <Typography variant={"body1"} color={"mediumvioletred"}>
                             Brand:{category}
                         </Typography>
-                        <Typography variant={"inherit"}>Company:{company}</Typography>
+                        <Typography variant={"body1"} color={"mediumvioletred"}>
+                            Company:{company}
+                        </Typography>
                     </div>
+                    <hr className={"line"}/>
+                    {
+                        stock>0 &&<AddToCart product={singleProduct}/>
+                    }
+                </div>
 
                 </div>
-                </div>
+
         </div>
+
     </div>
 }

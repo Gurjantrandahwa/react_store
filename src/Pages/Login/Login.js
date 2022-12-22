@@ -31,6 +31,7 @@ export default function Login() {
 
 
                         <Typography
+                            sx
                             align="center"
                             color="textSecondary"
                             variant="h4"
@@ -62,7 +63,9 @@ export default function Login() {
                         type="password"
                         value={formik.values.password}
                         variant="outlined"/>
-                    <Button fullWidth variant={"contained"}>Submit</Button>
+                    <Button fullWidth size={
+                        'large'
+                    } variant={"contained"}>Submit</Button>
                 </form>
 
     </div>
