@@ -12,17 +12,19 @@
 
     img {
       width: 230px;
-height: 180px;
+      height: 180px;
       object-fit: cover;
     }
-    img:hover{
-        -webkit-animation: flash 3s;
-        animation: flash 3s;
+
+    img:hover {
+      -webkit-animation: flash 3s;
+      animation: flash 3s;
 
 
     }
   }
 }
+
 @-webkit-keyframes flash {
   0% {
     opacity: .4;
@@ -31,6 +33,7 @@ height: 180px;
     opacity: 1;
   }
 }
+
 @keyframes flash {
   0% {
     opacity: .4;
@@ -39,6 +42,7 @@ height: 180px;
     opacity: 1;
   }
 }
+
 .card {
   background-color: #fed4d4;
   padding: 10px 0;

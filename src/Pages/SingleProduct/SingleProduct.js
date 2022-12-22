@@ -112,8 +112,6 @@ export default function SingleProduct() {
 
                 </div>
                 </div>
-
-
         </div>
     </div>
 }
