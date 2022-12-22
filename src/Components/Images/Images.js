@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 const Images = ({images = [{url: ""}]}) => {
-    console.log(images)
+
     const [mainImage, setMainImage] = useState(images[0])
     return <div className={"images-container"}>
         <div className={"images-container-images"}>

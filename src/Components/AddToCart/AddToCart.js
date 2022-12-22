@@ -1,24 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "./AddToCart.scss";
 import {Button, Typography} from "@mui/material";
+import {FaCheck} from "react-icons/fa";
 
 export default function AddToCart({product}) {
-    const {id,colors,stock}=product;
-
+    const {id, colors, stock} = product;
+    const [color, setColor] = useState(colors[0])
     return <div>
-    <div className={"colors"}>
-        <Typography variant={"body1"}>
+
+        <Typography variant={"body1"} className={"colors"}>
             Colors:
             {
-                colors.map((color,index)=>{
-                    return<Button key={index}
-                    style={{backgroundColor:color}}>
-                        {color}
-                    </Button>
+                colors.map((curColor, index) => {
+                    return <button key={index}
+                                   style={{backgroundColor: curColor}}
+                                   className={color === curColor ? "color-btn color-btn-active" : "color-btn"}
+                                   onClick={() => {
+                                       setColor(curColor)
+                                   }}>
+                        {color === curColor ? <FaCheck/> : null}
+                    </button>
                 })
             }
         </Typography>
+    {/*Add to cart*/}
+        <div>
 
-    </div>
+        </div>
+
     </div>
 }
