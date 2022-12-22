@@ -26,22 +26,10 @@ export default function Login() {
         }
     });
     return <div className={"login"}>
-        <Box
-             sx={{
-                 // alignItems: "center",
-                 // display: "flex",
-                 // flexGrow: 1,
-                 // minHeight: "100%"
-             }}>
-            <Container maxWidth={"sm"}>
+
                 <form onSubmit={formik.handleSubmit}>
 
-                    <Box
-                        sx={{
-                            // pb: 1,
-                            // pt: 3
-                        }}
-                    >
+
                         <Typography
                             align="center"
                             color="textSecondary"
@@ -49,35 +37,33 @@ export default function Login() {
                         >
                             Please sign in to continue
                         </Typography>
-                    </Box>
+
                     <TextField
                         fullWidth
-                        // label="Email Address"
-                        // helperText={formik.touched.email && formik.errors.email}
-                        // error={Boolean(formik.touched.email && formik.errors.email)}
-                        //
-                        // name="email"
-                        // onBlur={formik.handleBlur}
-                        // onChange={formik.handleChange}
-                        // type="email"
-                        // value={formik.values.email}
+                        label="Email Address"
+                        helperText={formik.touched.email && formik.errors.email}
+                        error={Boolean(formik.touched.email && formik.errors.email)}
+                        name="email"
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
+                        type="email"
+                        value={formik.values.email}
                         variant="outlined"/>
 
                     <TextField
                         fullWidth
-                        // label="Password"
-                        // helperText={formik.touched.password && formik.errors.password}
-                        // error={Boolean(formik.touched.password && formik.errors.password)}
-                        // margin="normal"
-                        // name="password"
-                        // onBlur={formik.handleBlur}
-                        // onChange={formik.handleChange}
-                        // type="password"
-                        // value={formik.values.password}
+                        label="Password"
+                        helperText={formik.touched.password && formik.errors.password}
+                        error={Boolean(formik.touched.password && formik.errors.password)}
+                        margin="normal"
+                        name="password"
+                        onBlur={formik.handleBlur}
+                        onChange={formik.handleChange}
+                        type="password"
+                        value={formik.values.password}
                         variant="outlined"/>
                     <Button fullWidth variant={"contained"}>Submit</Button>
                 </form>
-            </Container>
-        </Box>
+
     </div>
 }
