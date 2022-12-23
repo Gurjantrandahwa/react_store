@@ -31,7 +31,7 @@ export default function Login() {
 
 
                         <Typography
-                            sx
+                            textTransform={"capitalize"}
                             align="center"
                             color="textSecondary"
                             variant="h4"
