@@ -1,0 +1,17 @@
+.products-wrapper {
+  margin: 2rem 5rem;
+  -webkit-box-shadow: 6px -2px 25px -10px rgba(186, 98, 214, 0.92);
+  -moz-box-shadow: 6px -2px 25px -10px rgba(186, 98, 214, 0.92);
+  box-shadow: 6px -2px 25px -10px rgba(186, 98, 214, 0.92);
+  border: 1px solid mediumorchid;
+  padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.54);
+}
+
+.main-products {
+  display: flex;
+  flex-direction: column;
+}
