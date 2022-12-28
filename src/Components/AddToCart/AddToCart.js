@@ -46,7 +46,11 @@ export default function AddToCart({product}) {
                 setIncrease={setIncrease}/>
             {
                 amount===stock?
-                <div><Alert color={"error"}>{message}</Alert></div>:""
+                <div><Alert
+
+                    severity={"warning"}
+                    // variant={"outlined"}
+                >{message}</Alert></div>:""
             }
 
         </div>
