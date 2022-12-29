@@ -1,15 +1,16 @@
-.filter-p-container{
-border: 1px solid mediumorchid;
+.filter-p-container {
+  border: 1px solid mediumorchid;
   padding: 20px;
   border-radius: 10px;
- background-color: #9be5cd;
+  background-color: #9be5cd;
+  max-width: fit-content;
+  justify-content: center;
+  margin: auto;
+  form {
 
-  form{
-
-    input{
+    input {
       //color: white!important;
       background-color: white;
-
     }
   }
 }

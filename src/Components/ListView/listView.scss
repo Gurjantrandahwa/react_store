@@ -8,7 +8,9 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  place-items: center;
 }
 .list-view-card-data{
-  width:400px ;
+  max-width:400px ;
 }

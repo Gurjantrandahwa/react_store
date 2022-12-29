@@ -23,9 +23,8 @@ const Rating = ({stars, reviews}) => {
         <Typography
             sx={{alignItems: "center", display: "flex", gap: "10px"}}>
             {ratingStar}
-
-                ({reviews} customers review)
         </Typography>
+        <Typography>  ({reviews} customers review)</Typography>
     </div>
 }
 export default Rating;

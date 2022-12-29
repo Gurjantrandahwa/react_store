@@ -1,0 +1,22 @@
+.product-header {
+  background: #fed9d9;
+  margin: 0 20px 20px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //flex-wrap: wrap;
+  box-shadow: 6px 2px 25px -10px rgb(60, 234, 7)
+}
+
+.icon-button-h {
+  color: maroon !important;
+  padding: 10px !important;
+
+}
+
+.icon-button-h-active {
+  background-color: black !important;
+  color: goldenrod !important;
+}

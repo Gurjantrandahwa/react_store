@@ -28,9 +28,10 @@
   .sp-text-wrapper {
     //flex: 1;
     justify-content: center;
-   margin: auto;
+    margin: auto;
     display: flex;
     max-width: 50%;
+
     .product-price {
 
     }
@@ -40,8 +41,9 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
-flex-wrap: wrap;
+    //flex-wrap: wrap;
     gap: 20px;
+
     .data-qualities-icons {
       background-color: #151126;
       color: white;
@@ -69,7 +71,7 @@ flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 2rem;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
 
   .images-container-images {
