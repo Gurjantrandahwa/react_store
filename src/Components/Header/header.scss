@@ -1,7 +1,6 @@
 .header {
   padding: 0 2.8rem;
   height: 6.5rem;
-  background-color: #dc8787;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +15,33 @@
   }
   a{
     color: #310a33;
+  }
+  .cart-link {
+    position: relative;
+
+    .cart-trolley {
+      position: relative;
+      font-size: 1.5rem;
+    }
+
+    .cart-value {
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      background-color: #0e0b0b;
+      color: #ffffff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      top: -50%;
+      left: 70%;
+
+    }
+  }
+  .right-side{
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 }
 

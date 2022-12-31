@@ -30,3 +30,4 @@ export default function HeroSection({myData}) {
         </div>
     </div>
 }
+//https://pliki.dlahandlu.pl/i/04/64/82/046482_r0_940.jpg
