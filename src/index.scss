@@ -5,6 +5,10 @@
   font-family: "Work Sans", sans-serif;
 }
 
+.app-container {
+
+}
+
 html {
   overflow-x: hidden;
   line-height: 1.5;
@@ -13,6 +17,7 @@ html {
 a {
   text-decoration: none;
 }
+
 .container {
   max-width: 130rem;
   padding: 0 3.2rem;
@@ -21,14 +26,15 @@ a {
 li {
   list-style: none;
 }
+
 body {
   overflow-x: hidden;
-  //scrollbar-color: rgb(98 84 243);
-  //scrollbar-width: thin;
+
+  background: #FAF8F1;
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -42,12 +48,14 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-track {
   background-color: rgb(24 24 29);
 }
+
 p, button {
-  color:black;
+  color: black;
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 400;
 }
+
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -75,6 +83,7 @@ p, button {
 .line {
   border-top: 0.1rem solid #310a33;
 }
-button{
+
+button {
   cursor: pointer;
 }

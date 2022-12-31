@@ -24,21 +24,29 @@
       margin-bottom: 2rem;
     }
   }
-  .hero-img{
 
-    img{
+  .hero-img {
+    position: relative;
+
+    img {
       width: 80%;
-      place-items: center;
-      justify-content: center;
-      margin: auto;
-      display: flex;
 
     }
+  }
+
+  .online {
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: rgb(194 3 255 / 92%)
   }
 }
 
 @media screen and (max-width: 820px) {
-  .hero-wrapper{
+  .hero-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;

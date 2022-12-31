@@ -7,6 +7,7 @@ export default function HeroSection({myData}) {
     const {name,image}=myData
     return <div className={"container"}>
         <div className={"hero-wrapper"}>
+
             <div className={"hero-wrapper-data"}>
                 <p className={"intro-data"}>Welcome to</p>
                 <h1>{name}</h1>
@@ -24,8 +25,17 @@ export default function HeroSection({myData}) {
                 </NavLink>
             </div>
             <div className={"hero-img"}>
-                <img src={image}
-                     alt={"hero-image"}/>
+                <figure>
+                    <img src={"https://i.pinimg.com/564x/73/81/3b/73813bf6b6ab4d402cc3d5bcfe9809a7.jpg"}
+                         alt={"hero-image"}/>
+                    <figcaption className={"online"}>
+                        <p>
+                            Here
+                        </p>You can
+                        <p>shop online</p>
+                    </figcaption>
+                </figure>
+
             </div>
         </div>
     </div>

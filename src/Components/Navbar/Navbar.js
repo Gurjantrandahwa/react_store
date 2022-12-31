@@ -31,7 +31,19 @@ export default function Navbar() {
             </li>
 
             <li>
-
+                <NavLink to={"/login"}>
+                    <Button
+                            className={"login-button"}
+                            variant={"contained"}>
+                        Login
+                    </Button>
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to={"/cart"} className={"cart-link"}>
+                    <FiShoppingCart className={"cart-trolley"}/>
+                    <span className={"cart-value"}>10</span>
+                </NavLink>
             </li>
         </ul>
 

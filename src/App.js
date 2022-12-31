@@ -12,19 +12,22 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
     return <BrowserRouter>
-        <Header/>
-        <Routes>
-            <Route path={"/"} element={<Homepage/>}/>
-            <Route path={"/about"} element={<About/>}/>
-            <Route path={"/products"} element={<Products/>}/>
-            <Route path={"/contact"} element={<Contact/>}/>
-            <Route path={"/singleProduct/:id"} element={<SingleProduct/>}/>
-            <Route path={"/cart"} element={<Cart/>}/>
-            <Route path={"/login"} element={<Login/>}/>
-            <Route path="*" element={<ErrorPage/>}/>
+        <div className={"app-container"}>
+            <Header/>
+            <Routes>
+                <Route path={"/"} element={<Homepage/>}/>
+                <Route path={"/about"} element={<About/>}/>
+                <Route path={"/products"} element={<Products/>}/>
+                <Route path={"/contact"} element={<Contact/>}/>
+                <Route path={"/singleProduct/:id"} element={<SingleProduct/>}/>
+                <Route path={"/cart"} element={<Cart/>}/>
+                <Route path={"/login"} element={<Login/>}/>
+                <Route path="*" element={<ErrorPage/>}/>
 
-        </Routes>
-        <Footer/>
+            </Routes>
+            <Footer/>
+        </div>
+
 
     </BrowserRouter>
 }
