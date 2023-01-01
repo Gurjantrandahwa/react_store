@@ -5,10 +5,12 @@ import {FiShoppingCart} from "react-icons/fi";
 import {CgClose, CgMenu} from "react-icons/cg";
 import {Button} from "@mui/material";
 
+
 export default function Navbar() {
     const [menuIcon, setMenuIcon] = useState()
     return <div className={menuIcon ? "navbar active" : "navbar"}>
-        <ul className={"nav-lists"} onClick={() => setMenuIcon(false)}>
+        <ul className={"nav-lists"} onClick={() => setMenuIcon(false)}
+                   >
             <li>
                 <NavLink to={"/"}>
                     Home

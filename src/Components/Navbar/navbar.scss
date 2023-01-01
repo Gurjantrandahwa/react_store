@@ -17,12 +17,12 @@
 
       :hover {
         text-decoration: none;
-        color: #850000;
+        color: #fe0000;
         transition: color 0.2s linear;
       }
 
       :focus {
-        color: #850000 !important;
+        color: #ff0000 !important;
       }
     }
 
@@ -54,12 +54,15 @@
 }
 
 .login-button {
-  border: 1px solid #151126 !important;
-  padding: 5px 20px;
-  font-size: 1rem;
+  background-color: mediumvioletred !important;
+  padding: 5px 24px !important;
+  border-radius: 24px !important;
 }
 
 .login-button:hover {
+  color: #ffffff !important;
+}
+.login-button:focus{
   color: #ffffff !important;
 }
 

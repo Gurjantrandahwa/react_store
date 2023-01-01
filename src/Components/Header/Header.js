@@ -14,6 +14,5 @@ export default function Header() {
         </NavLink>
         <Navbar/>
 
-
     </div>
 }
