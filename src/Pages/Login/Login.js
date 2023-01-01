@@ -26,47 +26,53 @@ export default function Login() {
         }
     });
     return <div className={"login"}>
+        <figure>
+            <img
+                src={"https://i.pinimg.com/564x/8d/c1/a1/8dc1a105e0155c342affa2f47996cbbb.jpg"}
+                alt={"login"}
+                width={400}
+            height={400}/>
+        </figure>
+        <form onSubmit={formik.handleSubmit}>
 
-                <form onSubmit={formik.handleSubmit}>
 
+            <Typography
+                textTransform={"capitalize"}
+                align="center"
+                color="textSecondary"
+                variant="h4"
+            >
+                Please sign in to continue
+            </Typography>
 
-                        <Typography
-                            textTransform={"capitalize"}
-                            align="center"
-                            color="textSecondary"
-                            variant="h4"
-                        >
-                            Please sign in to continue
-                        </Typography>
+            <TextField
+                fullWidth
+                label="Email Address"
+                helperText={formik.touched.email && formik.errors.email}
+                error={Boolean(formik.touched.email && formik.errors.email)}
+                name="email"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                type="email"
+                value={formik.values.email}
+                variant="outlined"/>
 
-                    <TextField
-                        fullWidth
-                        label="Email Address"
-                        helperText={formik.touched.email && formik.errors.email}
-                        error={Boolean(formik.touched.email && formik.errors.email)}
-                        name="email"
-                        onBlur={formik.handleBlur}
-                        onChange={formik.handleChange}
-                        type="email"
-                        value={formik.values.email}
-                        variant="outlined"/>
-
-                    <TextField
-                        fullWidth
-                        label="Password"
-                        helperText={formik.touched.password && formik.errors.password}
-                        error={Boolean(formik.touched.password && formik.errors.password)}
-                        margin="normal"
-                        name="password"
-                        onBlur={formik.handleBlur}
-                        onChange={formik.handleChange}
-                        type="password"
-                        value={formik.values.password}
-                        variant="outlined"/>
-                    <Button fullWidth size={
-                        'large'
-                    } variant={"contained"}>Submit</Button>
-                </form>
+            <TextField
+                fullWidth
+                label="Password"
+                helperText={formik.touched.password && formik.errors.password}
+                error={Boolean(formik.touched.password && formik.errors.password)}
+                margin="normal"
+                name="password"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                type="password"
+                value={formik.values.password}
+                variant="outlined"/>
+            <Button fullWidth size={
+                'large'
+            } variant={"contained"}>Submit</Button>
+        </form>
 
     </div>
 }

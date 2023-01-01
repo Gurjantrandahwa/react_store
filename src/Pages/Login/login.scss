@@ -1,11 +1,24 @@
-.login{
-  padding: 50px 0;
-  height: 80vh;
+.login {
+  padding: 100px 20px;
   display: flex;
   margin: auto;
   align-items: center;
   justify-content: center;
-  h4{
+gap: 40px;
+flex-wrap: wrap;
+  img{
+  //place-items: center;
+object-fit: contain;
+  }
+  form{
+    //border: 1px solid #151126;
+    //border-radius: 20px;
+    //padding: 30px;
+    //background-color: transparent;
+
+  }
+  h4 {
     margin-bottom: 30px;
+    font-size: 24px;
   }
 }
