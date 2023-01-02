@@ -7,8 +7,12 @@ export default function HeroSection() {
 
     return <div className={"hero-wrapper"}
                 style={{
-                    backgroundImage: `url("https://cdn.shopify.com/s/files/1/0898/4708/articles/68_Consumer_Electronics_websites_FA_20d8e1ed-3668-47ef-aa3f-975734369b54.jpg?v=1595337322")`,
-                    position: "center center",
+                    backgroundImage: `url("https://freepngimg.com/download/abstract/125638-abstract-graphic-design-free-png-hq.png")`,
+
+                    backgroundPosition: "center center",
+
+                    objectFit:"cover"
+
                 }}>
         <div className={"hero-wrapper-data"}>
             <h1>Global Store</h1>

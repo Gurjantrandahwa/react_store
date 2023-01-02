@@ -1,5 +1,8 @@
 .navbar {
 
+a{
+  color: black!important;
+}
 
   .nav-lists {
     display: flex;
@@ -13,16 +16,16 @@
       font-size: 1rem;
       font-weight: 500;
       text-transform: uppercase;
+      color: white!important;
       transition: color 0.3s linear;
-
       :hover {
         text-decoration: none;
-        color: #fe0000;
+        color: mediumvioletred!important;
         transition: color 0.2s linear;
       }
 
       :focus {
-        color: #ff0000 !important;
+        color: mediumvioletred!important;
       }
     }
 
@@ -116,6 +119,7 @@
     transform: translateX(100%);
     transition: all 2s linear;
     background-color: #161515;
+
   }
   .active .nav-lists {
     visibility: visible;

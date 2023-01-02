@@ -13,7 +13,7 @@ import {Container} from "@mui/material";
 
 function App() {
     return <BrowserRouter>
-        <Container maxWidth={"xl"}>
+        {/*<Container maxWidth={"xl"}>*/}
             <Header/>
             <Routes>
                 <Route path={"/"} element={<Homepage/>}/>
@@ -27,7 +27,7 @@ function App() {
 
             </Routes>
             <Footer/>
-        </Container>
+        {/*</Container>*/}
 
 
     </BrowserRouter>

@@ -1,17 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
 import "./productHeader.scss"
-import {FormControl, IconButton, InputLabel, MenuItem, Select, Typography} from "@mui/material";
+import {IconButton,  Typography} from "@mui/material";
 import {BsFillGridFill, BsList} from "react-icons/bs";
 import {useFilterContext} from "../../Common/Context/filter_context";
 
+
 export default function ProductHeader() {
-    // const [price, setPrice] = useState('');
-    // const handleChange = (event) => {
-    //     setPrice(event.target.value);
-    // };
+
     const {filter_products, grid_view, setGridView, setListView,sorting } = useFilterContext()
     return <div className={"product-header"}>
-        {/*gid*/}
+
         <div>
             <IconButton
                 sx={{marginRight: "15px"}}
@@ -32,12 +30,11 @@ export default function ProductHeader() {
 
         </div>
         <div>
-            <form action={"#"}
-            >
-                <label htmlFor={"sort"}>Price</label>
+            <form action={"#"}>
+                <label htmlFor={"sort"}> </label>
                 <select
+                    className={"dropdown-filter"}
                     id="sort"
-
                     name={"sort"}
                     onClick={sorting}
                 >

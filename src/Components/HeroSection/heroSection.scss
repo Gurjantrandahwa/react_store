@@ -1,11 +1,13 @@
-
 .hero-wrapper {
-  height: 90vh;
+
   background-repeat: no-repeat;
   padding: 30px;
-background-position: center;
+
+  background-position: center;
+
   .hero-wrapper-data {
-    color: white;
+    color: gray;
+    font-weight: 500;
 
     h1 {
       color: mediumvioletred;
@@ -17,7 +19,6 @@ background-position: center;
       margin-bottom: 2rem;
     }
   }
-
 
   .online {
     position: absolute;

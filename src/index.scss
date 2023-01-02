@@ -26,7 +26,7 @@ li {
 
 body {
   overflow-x: hidden;
-  background-color:#151419;
+
 }
 
 body::-webkit-scrollbar {
@@ -78,14 +78,3 @@ p {
   border-top: 0.1rem solid #310a33;
 }
 
-button {
-  background-color: mediumvioletred !important;
-  border-radius: 20px!important;
-  color: white!important;
-}
-button:focus{
-  color: white!important;
-}
-button:hover{
-  color: white!important;
-}
