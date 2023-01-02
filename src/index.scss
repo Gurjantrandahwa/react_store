@@ -6,7 +6,7 @@
 }
 
 .app-container {
-
+  //background-color: #151126;
 }
 
 html {
@@ -29,8 +29,6 @@ li {
 
 body {
   overflow-x: hidden;
-
-  background: #FAF8F1;
 }
 
 body::-webkit-scrollbar {
@@ -38,7 +36,6 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-
   background: #fff;
   border: 5px solid transparent;
   border-radius: 9px;
@@ -50,10 +47,10 @@ body::-webkit-scrollbar-track {
 }
 
 p, button {
-  color: black;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-weight: 400;
+  //color: black;
+  //font-size: 1.2rem;
+  //line-height: 1.5;
+  //font-weight: 400;
 }
 
 .grid-two-column {

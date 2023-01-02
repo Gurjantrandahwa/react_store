@@ -1,17 +1,12 @@
 
 .hero-wrapper {
-  display: grid;
-  gap: 5rem;
-  grid-template-columns:repeat(2, 1fr);
-  margin-top: 4rem;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.pngitem.com/pimgs/m/513-5131515_website-background-design-illustration-hd-png-download.png");
+  background-repeat: no-repeat;
 
   .hero-wrapper-data {
-    .intro-data {
-      margin-bottom: 0;
-      text-transform: capitalize;
-      color: #fe5203;
-      letter-spacing: 1.2px;
-    }
+
 
 
     h1 {

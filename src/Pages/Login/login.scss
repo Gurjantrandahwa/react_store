@@ -4,19 +4,23 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-gap: 40px;
-flex-wrap: wrap;
-  img{
-  //place-items: center;
-object-fit: contain;
-  }
-  form{
-    //border: 1px solid #151126;
-    //border-radius: 20px;
-    //padding: 30px;
-    //background-color: transparent;
+  gap: 40px;
+  flex-wrap: wrap;
 
+  img {
+    //place-items: center;
+    object-fit: contain;
   }
+
+  form {
+    border: 1px solid #151126;
+    border-radius: 20px;
+    padding: 30px 10px;
+    background-color: transparent;
+    height: 80vh;
+    width: 70vh;
+  }
+
   h4 {
     margin-bottom: 30px;
     font-size: 24px;
