@@ -13,9 +13,13 @@ export default function FeatureProducts() {
         </div>
     }
     return <div className={"container feature-container"}>
-        <Typography variant={"h5"} sx={{
-            marginBottom: "30px", textAlign: "center",
-        }}>
+        <Typography
+            variant={"h4"}
+            sx={{
+                marginBottom: "30px",
+                textAlign: "center",
+                color: "white"
+            }}>
             Our Features Products
         </Typography>
         <div className={"features-products"}>

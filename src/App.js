@@ -9,10 +9,11 @@ import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Cart from "./Pages/Cart/Cart";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import Footer from "./Components/Footer/Footer";
+import {Container} from "@mui/material";
 
 function App() {
     return <BrowserRouter>
-        <div className={"app-container"}>
+        <Container maxWidth={"xl"}>
             <Header/>
             <Routes>
                 <Route path={"/"} element={<Homepage/>}/>
@@ -25,8 +26,8 @@ function App() {
                 <Route path="*" element={<ErrorPage/>}/>
 
             </Routes>
-            {/*<Footer/>*/}
-        </div>
+            <Footer/>
+        </Container>
 
 
     </BrowserRouter>

@@ -28,7 +28,7 @@ export default function Login() {
     return <div className={"login"}>
         <figure>
             <img
-                src={"https://i.pinimg.com/564x/8d/c1/a1/8dc1a105e0155c342affa2f47996cbbb.jpg"}
+                src={"https://img2.storyblok.com/1440x0/filters:format(webp)/f/47007/2400x1261/3de5e3412e/card.png"}
                 alt={"login"}
                 width={400}
             height={400}/>

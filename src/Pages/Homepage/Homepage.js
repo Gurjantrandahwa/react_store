@@ -8,10 +8,10 @@ import FeatureProducts from "../../Components/FeatureProducts/FeatureProducts";
 export default function Homepage() {
 
     return <div>
-        <HeroSection myData={data}/>
-        {/*<FeatureProducts/>*/}
-        {/*<Features/>*/}
-        {/*<Brands/>*/}
+        <HeroSection />
+        <FeatureProducts/>
+        <Features/>
+        <Brands/>
     </div>
 
 }

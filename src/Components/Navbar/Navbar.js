@@ -35,7 +35,7 @@ export default function Navbar() {
             <li>
                 <NavLink to={"/login"}>
                     <Button
-                            className={"login-button"}
+
                             variant={"contained"}>
                         Login
                     </Button>

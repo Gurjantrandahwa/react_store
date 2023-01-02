@@ -5,38 +5,36 @@ import {NavLink} from "react-router-dom";
 
 export default function HeroSection() {
 
-    return <div className={"container"}>
-        <div className={"hero-wrapper"}>
-
-            <div className={"hero-wrapper-data"}>
-                <h1>This is a Global Store</h1>
-                <p>Lorem ipsum is placeholder text commonly used in
-                    the graphic, print, and publishing industries for
-                    previewing layouts and visual mockups.
-                </p>
-                <NavLink to={"/products"}>
-                    <Button variant={"contained"}
-                    sx={{
-                        backgroundColor:"orangered"
-                    }}>
-                        Shop now
-                    </Button>
-                </NavLink>
-            </div>
-            {/*<div className={"hero-img"}>*/}
-            {/*    <figure>*/}
-            {/*        <img src={"https://i.pinimg.com/564x/73/81/3b/73813bf6b6ab4d402cc3d5bcfe9809a7.jpg"}*/}
-            {/*             alt={"hero-image"}/>*/}
-            {/*        <figcaption className={"online"}>*/}
-            {/*            <p>*/}
-            {/*                Here*/}
-            {/*            </p>You can*/}
-            {/*            <p>shop online</p>*/}
-            {/*        </figcaption>*/}
-            {/*    </figure>*/}
-
-            {/*</div>*/}
+    return <div className={"hero-wrapper"}
+                style={{
+                    backgroundImage: `url("https://cdn.shopify.com/s/files/1/0898/4708/articles/68_Consumer_Electronics_websites_FA_20d8e1ed-3668-47ef-aa3f-975734369b54.jpg?v=1595337322")`,
+                    position: "center center",
+                }}>
+        <div className={"hero-wrapper-data"}>
+            <h1>Global Store</h1>
+            <p>
+                Here you can buy things as your preference.
+            </p>
+            <NavLink to={"/products"}>
+                <Button variant={"contained"}>
+                    Shop now
+                </Button>
+            </NavLink>
         </div>
+        {/*<div className={"hero-img"}>*/}
+        {/*    <figure>*/}
+        {/*        <img src={"https://i.pinimg.com/564x/73/81/3b/73813bf6b6ab4d402cc3d5bcfe9809a7.jpg"}*/}
+        {/*             alt={"hero-image"}/>*/}
+        {/*        <figcaption className={"online"}>*/}
+        {/*            <p>*/}
+        {/*                Here*/}
+        {/*            </p>You can*/}
+        {/*            <p>shop online</p>*/}
+        {/*        </figcaption>*/}
+        {/*    </figure>*/}
+
+        {/*</div>*/}
     </div>
+
 }
 //https://pliki.dlahandlu.pl/i/04/64/82/046482_r0_940.jpg
