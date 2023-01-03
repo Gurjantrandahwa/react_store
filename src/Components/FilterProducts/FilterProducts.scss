@@ -6,9 +6,51 @@
   margin: auto;
   background-color: white;
   color: black;
-border: 1px solid #161515;
+  border: 1px solid #161515;
 
   form {
+    margin-bottom: 20px;
+  }
+
+  .category-data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+
+    button {
+      border: none !important;
+      align-self: flex-start !important;
+      background-color: transparent !important;
+      text-transform: capitalize !important;
+      //color: black !important;
+
+    }
+  }
+
+  .company-select {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .color-wrapper {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+
+    .round-btn {
+      padding: 15px;
+      border: none;
+      border-radius: 50%;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+    }
 
   }
+
 }

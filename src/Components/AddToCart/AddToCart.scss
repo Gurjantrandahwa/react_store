@@ -13,17 +13,16 @@
 
 .color-btn {
 
-  min-width: 45px!important;
-  height: 40px;
   border-radius: 50%!important;
   opacity: 0.5;
-  //padding: 5px;
+  padding: 10px;
   color: white!important;
+  &:hover {
+    opacity: 1;
+  }
 }
 
-:hover {
-  opacity: 1;
-}
+
 
 .color-btn-active {
   opacity: 1;

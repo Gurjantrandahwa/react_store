@@ -78,3 +78,14 @@ p {
   border-top: 0.1rem solid #310a33;
 }
 
+.round-btn {
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.2s;
+  }}

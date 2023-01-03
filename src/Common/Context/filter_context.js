@@ -14,6 +14,7 @@ export const FilterContextProvider = ({children}) => {
             text: '',
             category:"all",
             company:"all",
+            color:"all"
         },
     }
 

@@ -26,15 +26,14 @@ export default function AddToCart({product}) {
             Colors:
             {
                 colors.map((curColor, index) => {
-                    return <Button key={index}
-                                   variant={"contained"}
+                    return <button key={index}
                                    style={{backgroundColor: curColor}}
                                    className={color === curColor ? "color-btn color-btn-active" : "color-btn"}
                                    onClick={() => {
                                        setColor(curColor)
                                    }}>
                         {color === curColor ? <FaCheck/> : null}
-                    </Button>
+                    </button>
                 })
             }
         </Typography>
