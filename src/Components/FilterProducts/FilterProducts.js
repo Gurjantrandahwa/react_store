@@ -1,15 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
 import "./FilterProducts.scss";
-import {TextField} from "@mui/material";
+import {TextField, Typography} from "@mui/material";
 import {useFilterContext} from "../../Common/Context/filter_context";
 
 export default function FilterProducts() {
     const {
-        filters: {text},
+        filters: {text,category},
         updateFilterValue,
-        filter_products
+        all_products,
     } = useFilterContext();
 
+    const getUniqueData = (data, property) => {
+        let newValue = data.map((elem) => {
+            return elem[property]
+        });
+        return newValue = ["All", ...new Set(newValue)]
+    }
+    const categoryOnlyData = getUniqueData(all_products, "category")
     return <div className={"filter-p-container"}>
         <form onSubmit={(e) => e.preventDefault()}>
             <TextField
@@ -21,6 +28,21 @@ export default function FilterProducts() {
                 value={text}
                 onChange={updateFilterValue}/>
         </form>
-
+        <div>
+            <Typography variant={"h5"}>Category</Typography>
+            <div>
+                {categoryOnlyData.map((elem,index)=>{
+                    return<button
+                    key={index}
+                    type={"button"}
+                    name={"category"}
+                    value={elem}
+                    onClick={updateFilterValue}
+                    >
+                        {elem}
+                    </button>
+                })}
+            </div>
+        </div>
     </div>
 }
