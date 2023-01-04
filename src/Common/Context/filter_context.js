@@ -12,9 +12,12 @@ export const FilterContextProvider = ({children}) => {
         sorting_value: "lowest",
         filters: {
             text: '',
-            category:"all",
-            company:"all",
-            color:"all"
+            category: "all",
+            company: "all",
+            color: "all",
+            maxPrice: 0,
+            price: 0,
+            minPrice: 0,
         },
     }
 
@@ -31,9 +34,9 @@ export const FilterContextProvider = ({children}) => {
     //sorting
     useEffect(() => {
 
-        dispatch({type:"FILTER_PRODUCTS"})
-         dispatch({type: "SORTING_PRODUCTS"})
-    }, [state.sorting_value,state.filters])
+        dispatch({type: "FILTER_PRODUCTS"})
+        dispatch({type: "SORTING_PRODUCTS"})
+    }, [state.sorting_value, state.filters])
 
     const sorting = (event) => {
         let userValue = event.target.value;
@@ -53,12 +56,12 @@ export const FilterContextProvider = ({children}) => {
 
     return <FilterContext.Provider
         value={{
-        ...state,
-        setGridView,
-        setListView,
-        sorting,
-        updateFilterValue,
-    }}>
+            ...state,
+            setGridView,
+            setListView,
+            sorting,
+            updateFilterValue,
+        }}>
         {children}
     </FilterContext.Provider>
 }

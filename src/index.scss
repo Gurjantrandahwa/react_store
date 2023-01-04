@@ -78,14 +78,23 @@ p {
   border-top: 0.1rem solid #310a33;
 }
 
-.round-btn {
-  padding: 15px;
-  border: none;
-  border-radius: 50%;
-  opacity: 0.5;
 
+.color-btn {
+
+  border-radius: 50%!important;
+  opacity: 0.5;
+  padding: 10px;
+  color: white!important;
+  border: none;
+  width: 35px;
+  height: 35px;
   &:hover {
     opacity: 1;
-    cursor: pointer;
-    transition: 0.2s;
-  }}
+  }
+}
+
+
+
+.color-btn-active {
+  opacity: 1;
+}

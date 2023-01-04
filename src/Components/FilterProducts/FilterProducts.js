@@ -2,10 +2,12 @@ import React from "react";
 import "./FilterProducts.scss";
 import {Button, TextField, Typography} from "@mui/material";
 import {useFilterContext} from "../../Common/Context/filter_context";
+import {FaCheck} from "react-icons/fa";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 export default function FilterProducts() {
     const {
-        filters: {text, category, company, color},
+        filters: {text, category, company, color, maxPrice, price, minPrice},
         updateFilterValue,
         all_products,
     } = useFilterContext();
@@ -84,8 +86,20 @@ export default function FilterProducts() {
             <div className={"color-wrapper"}>
                 {
                     colorsData.map((curColor, index) => {
+                        if (curColor === "all") {
+                            return <Button
+                                sx={{textTransform: "none"}}
+                                type={"button"}
+                                key={index}
+                                value={curColor}
+                                name={"color"}
+                                onClick={updateFilterValue}
+                            >
+                                All
+                            </Button>
+                        }
                         return <button
-                            className={"round-btn"}
+                            className={color === curColor ? "color-btn color-btn-active" : "color-btn"}
                             type={"button"}
                             key={index}
                             value={curColor}
@@ -94,12 +108,36 @@ export default function FilterProducts() {
                             onClick={updateFilterValue}
 
                         >
-                            {color === curColor ? "" : null}
+                            {/*{color === curColor ? "" : null}*/}
+                            {color === curColor ? <FaCheck color={"white"}/> : null}
                         </button>
                     })
                 }
             </div>
 
         </div>
+
+        <div>
+            <Typography variant={"h5"}>Price</Typography>
+
+            <Typography
+                variant={"subtitle1"}
+                color={"secondary"}
+            >
+                <FormatPrice price={price}/>
+            </Typography>
+
+                <input
+                    type={"range"}
+                    min={minPrice}
+                    max={maxPrice}
+                    value={price}
+                    onChange={updateFilterValue}
+                    name={"price"}
+                />
+
+        </div>
+
+
     </div>
 }
