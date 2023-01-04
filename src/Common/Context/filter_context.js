@@ -48,6 +48,11 @@ export const FilterContextProvider = ({children}) => {
         let value = event.target.value
         return dispatch({type: "UPDATE_FILTER_VALUE", payload: {name, value}})
     }
+    //clear filters
+    const clearFilters = () => {
+        dispatch({type: "CLEAR_FILTERS"})
+    }
+
 
     useEffect(() => {
         dispatch({type: "LOAD_FILTER_PRODUCTS", payload: products})
@@ -61,6 +66,7 @@ export const FilterContextProvider = ({children}) => {
             setListView,
             sorting,
             updateFilterValue,
+            clearFilters
         }}>
         {children}
     </FilterContext.Provider>

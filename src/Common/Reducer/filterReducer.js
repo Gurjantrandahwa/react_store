@@ -93,15 +93,31 @@ const filterReducer = (state, action) => {
                     item.colors.includes(color)
                 )
             }
-            if (price===0) {
-                tempFilterProduct = tempFilterProduct.filter((item) => item.price ==  price)
-            }else {
-                tempFilterProduct = tempFilterProduct.filter((item) => item.price <=  price)
+            if (price === 0) {
+                tempFilterProduct = tempFilterProduct.filter((item) => item.price == price)
+            } else {
+                tempFilterProduct = tempFilterProduct.filter((item) => item.price <= price)
             }
             return {
                 ...state,
                 filter_products: tempFilterProduct,
             }
+
+        case "CLEAR_FILTERS":
+            return {
+                ...state,
+                filters:{
+                   ...state.filters,
+                    text: '',
+                    category: "all",
+                    company: "all",
+                    color: "all",
+                    maxPrice: 0,
+                    price: state.filters.maxPrice,
+                    minPrice: state.filters.maxPrice,
+                },
+            }
+
         default:
             return state
     }

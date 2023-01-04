@@ -9,6 +9,7 @@ export default function FilterProducts() {
     const {
         filters: {text, category, company, color, maxPrice, price, minPrice},
         updateFilterValue,
+        clearFilters,
         all_products,
     } = useFilterContext();
 
@@ -118,7 +119,9 @@ export default function FilterProducts() {
         </div>
 
         <div>
-            <Typography variant={"h5"}>Price</Typography>
+            <Typography
+                sx={{marginTop:"10px"}}
+                variant={"h5"}>Price</Typography>
 
             <Typography
                 variant={"subtitle1"}
@@ -127,17 +130,26 @@ export default function FilterProducts() {
                 <FormatPrice price={price}/>
             </Typography>
 
-                <input
-                    type={"range"}
-                    min={minPrice}
-                    max={maxPrice}
-                    value={price}
-                    onChange={updateFilterValue}
-                    name={"price"}
-                />
-
+            <input
+                type={"range"}
+                min={minPrice}
+                max={maxPrice}
+                value={price}
+                onChange={updateFilterValue}
+                name={"price"}
+            />
         </div>
 
+        <div>
+            <Button
+                variant={"contained"}
+                color={"error"}
+                sx={{marginTop:"20px"}}
+                onClick={clearFilters}
+            >
+                Clear filters
+            </Button>
+        </div>
 
     </div>
 }

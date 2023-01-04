@@ -12,17 +12,17 @@
 
 
 .single-product-wrapper {
-  //display: flex;
+  display: flex;
   justify-content: center;
   margin: auto;
   padding: 3rem 0;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 
 
   .sp-images-wrapper {
 
-    //flex: 1;
+    flex: 1;
   }
 
   .sp-text-wrapper {
@@ -86,7 +86,8 @@
 
 .main-image {
   img {
-    width: 400px;
+    max-width: 300px;
+    place-items: center;
     border-radius: 10px;
   }
 
