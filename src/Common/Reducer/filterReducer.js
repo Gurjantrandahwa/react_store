@@ -78,8 +78,8 @@ const filterReducer = (state, action) => {
                 )
             }
             if (color){
-                tempFilterProduct = tempFilterProduct.filter(
-                    (item) => item.color.includes(color)
+                tempFilterProduct = tempFilterProduct.filter((item) =>
+                    item.colors.includes(color)
                 )
             }
             return {
