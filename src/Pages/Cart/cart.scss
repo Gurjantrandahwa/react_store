@@ -1,5 +1,22 @@
-.cart-data{
+.cart-container{
+  padding: 50px 100px;
+}
+
+.cart-data {
   display: flex;
-  margin: 30px;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.color-style{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 668px) {
+  .hide {
+    display: none;
+  }
 }
