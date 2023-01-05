@@ -12,7 +12,9 @@ export default function AddToCart({product}) {
     const {id, colors, stock} = product;
     const [color, setColor] = useState(colors[0])
     const [amount, setAmount] = useState(1)
-    const [message, setMessage] = useState(`We have ${stock} items in our stock`)
+    const [message, setMessage] = useState(`Sorry We just have ${stock} items in our stock`)
+
+
     const setDecrease = () => {
         amount > 1 ? setAmount(amount - 1) : setAmount(1);
     }
@@ -46,11 +48,12 @@ export default function AddToCart({product}) {
                 setIncrease={setIncrease}/>
             {
                 amount === stock ?
-                    <div><Alert
+                    <Alert
 
                         severity={"warning"}
                         // variant={"outlined"}
-                    >{message}</Alert></div> : ""
+                    >{message}
+                    </Alert> : ""
             }
 
         </div>
