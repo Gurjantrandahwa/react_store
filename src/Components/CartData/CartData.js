@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {IconButton, Typography} from "@mui/material";
 import FormatPrice from "../../Helpers/FormatPrice";
 import CartAmount from "../CartAmount/CartAmount";
@@ -6,7 +6,7 @@ import {FaTrash} from "react-icons/fa";
 import {useCartContext} from "../../Common/Context/cart_context";
 
 export default function CartData({id, name, image, color, price, amount}) {
-    const {removeItem,setIncrease,setDecrease} = useCartContext();
+    const {removeItem, setIncrease, setDecrease} = useCartContext();
 
     return <div className={"cart-data"}>
         <div style={{width: "100px"}}>

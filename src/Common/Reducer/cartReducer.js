@@ -59,15 +59,47 @@ const cartReducer = (state, action) => {
             cart: []
         }
     }
-    if (action.type==="INCREASE"){
+
+    if (action.type === "DECREASE") {
+        let updatedProduct = state.cart.map((value) => {
+                if (value.id === action.payload) {
+                    let decAmount = value.amount - 1;
+                    if (decAmount <= 1) {
+                        decAmount = 1
+                    }
+                    return {
+                        ...value,
+                        amount: decAmount,
+                    }
+                } else {
+                    return value;
+                }
+            }
+        );
         return {
             ...state,
-            amount: +1
+            cart: updatedProduct
         }
     }
-    if (action.type==="DECREASE"){
+    if (action.type === "INCREASE") {
+        let updatedProduct = state.cart.map((value) => {
+                if (value.id === action.payload) {
+                    let incAmount = value.amount + 1;
+                    if (incAmount >= value.max) {
+                        incAmount = value.max
+                    }
+                    return {
+                        ...value,
+                        amount: incAmount,
+                    }
+                } else {
+                    return value;
+                }
+            }
+        );
         return {
-            ...state
+            ...state,
+            cart: updatedProduct
         }
     }
 
