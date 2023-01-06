@@ -16,10 +16,10 @@ export default function CartData({id, name, image, color, price, amount}) {
                 </figure>
                 <Typography variant={"subtitle1"}>{name}</Typography>
                 <div style={{display: "flex"}}>
-                    <Typography> Color: </Typography>
+                    <Typography> Color : </Typography>
                     <div
                         className={"color-style"}
-                        style={{backgroundColor: color}}/>
+                        style={{backgroundColor: color,marginLeft:"5px"}}/>
                 </div>
 
             </div>
