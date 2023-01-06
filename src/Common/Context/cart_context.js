@@ -40,10 +40,20 @@ export const CartProvider = ({children}) => {
 
     }, [state.cart])
 
+    const clearCart = () => {
+        dispatch({type: "CLEAR_CART"})
+    }
+    const setIncrease = () => {
+        dispatch({type: "INCREASE"})
+    }
+    const setDecrease = () => {
+        dispatch({type: "DECREASE"})
+    }
     return <CartContext.Provider value={{
         ...state,
         addToCart,
-        removeItem
+        removeItem,
+        clearCart, setIncrease, setDecrease
 
     }}>
         {children}
