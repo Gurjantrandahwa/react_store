@@ -1,12 +1,14 @@
 import React from "react";
 import {useCartContext} from "../../Common/Context/cart_context";
 import "./cart.scss";
-import {Alert, Box, Button, Divider, Typography} from "@mui/material";
+import {Alert, Box, Button, Divider, Paper, Typography} from "@mui/material";
 import CartData from "../../Components/CartData/CartData";
 import {NavLink} from "react-router-dom";
+import FormatPrice from "../../Helpers/FormatPrice";
 
 export default function Cart() {
-    const {cart, clearCart} = useCartContext();
+    const {cart, clearCart, total_price, shipping_fee} = useCartContext();
+
 
     if (cart.length === 0) {
         return <Box sx={{
@@ -77,6 +79,31 @@ export default function Cart() {
                 variant={"contained"} color={"error"}>
                 Clear Cart
             </Button>
+        </Box>
+
+        <Box sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+            margin: "40px"
+        }}>
+            <Paper sx={{
+                width: 250,
+                height: 150,
+                backgroundColor: "lightgrey",
+                color: "black",
+                padding: "20px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px"
+            }}>
+                <Typography variant={"body1"}>Sub Total: <FormatPrice price={total_price}/></Typography>
+                <Typography variant={"body1"}>Shipping Fee: <FormatPrice price={shipping_fee}/></Typography>
+
+                <Divider variant={"fullWidth"} color={"secondary"}/>
+                <Typography variant={"body1"}>Order Total:
+                    <FormatPrice price={shipping_fee + total_price}/></Typography>
+
+            </Paper>
         </Box>
 
     </div>

@@ -2,8 +2,10 @@
 
   background-repeat: no-repeat;
   padding: 30px;
-
+  display: flex;
+  flex-wrap: wrap;
   background-position: center;
+  justify-content: space-around;
 
   .hero-wrapper-data {
     color: gray;
@@ -29,6 +31,22 @@
     font-weight: 500;
     color: rgb(194 3 255 / 92%)
   }
+
+  .hero-img {
+    position: relative;
+
+    img {
+      width: 400px;
+    }
+
+    .caption {
+      position: absolute;
+      top: 140px;
+      left: 100px;
+      color: #a82a6c;
+    }
+  }
+
 }
 
 @media screen and (max-width: 768px) {

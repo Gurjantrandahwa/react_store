@@ -30,7 +30,7 @@ export const CartProvider = ({children}) => {
     }
     //local storage
     useEffect(() => {
-        dispatch({type: "CART_TOTAL"})
+        dispatch({type: "CART_TOTAL_AND_PRICE"})
         localStorage.setItem("myCart", JSON.stringify(state.cart))
 
     }, [state.cart])

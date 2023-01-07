@@ -102,19 +102,51 @@ const cartReducer = (state, action) => {
             cart: updatedProduct
         }
     }
-    if (action.type === "CART_TOTAL") {
-        let updatedItemVal = state.cart.reduce((initial, value) => {
-            let {amount} = value;
-            initial = initial + amount
-            return initial
-        }, 0);
+    // if (action.type === "CART_TOTAL") {
+    //     let updatedItemVal = state.cart.reduce((initial, value) => {
+    //         let {amount} = value;
+    //         initial = initial + amount
+    //         return initial
+    //     }, 0);
+    //
+    //     return {
+    //         ...state,
+    //         total_item: updatedItemVal,
+    //     }
+    // }
+    // if (action.type === "CART_TOTAL_PRICE") {
+    //     let updatedPrice = state.cart.reduce((initial, value) => {
+    //         let {price, amount} = value;
+    //         initial = initial + price * amount
+    //         return initial
+    //     }, 0);
+    //     return {
+    //         ...state,
+    //         total_price: updatedPrice,
+    //     }
+    // }
+    if (action.type === "CART_TOTAL_AND_PRICE") {
+        let {total_item, total_price} = state.cart.reduce((
+            accum, value) => {
+                let {price, amount} = value;
+
+                accum.total_item  += amount;
+                accum.total_price  += price * amount
+
+                return accum;
+            },
+            {
+                total_item: 0,
+                total_price:0,
+            }
+            );
 
         return {
             ...state,
-            total_item: updatedItemVal,
+            total_item,
+            total_price,
         }
     }
-
 
     return state;
 }
