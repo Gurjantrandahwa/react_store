@@ -35,20 +35,19 @@ export default function Navbar() {
                     Contact
                 </NavLink>
             </li>
-            {isAuthenticated ?<li>
+            {isAuthenticated ?
                 <Button
                     variant={"contained"}
                     color={"secondary"}
                     onClick={() => logout({returnTo: window.location.origin})}>
                     Log Out
-                </Button></li> :
-                <li>
+                </Button> :
+
                     <Button
                         variant={"contained"}
                         color={"secondary"}
                         onClick={() => loginWithRedirect()}>Log In
                     </Button>
-                </li>
 
             }
 

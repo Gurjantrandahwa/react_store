@@ -1,7 +1,7 @@
 .navbar {
 
 a{
-  color: black!important;
+  color: white!important;
 }
 
   .nav-lists {
@@ -88,7 +88,7 @@ a{
   }
   .menu-icon {
     font-size: 1.8rem;
-    color: white;
+    color: mediumvioletred;
 
   }
   .active .menu-icon {
@@ -119,6 +119,7 @@ a{
     transform: translateX(100%);
     transition: all 2s linear;
     background-color: #161515;
+
 
   }
   .active .nav-lists {
