@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className={"hero-img"}>
             <figure>
                 <img src={"https://i.pinimg.com/564x/73/81/3b/73813bf6b6ab4d402cc3d5bcfe9809a7.jpg"}
-                     alt={"hero-image"}/>
+                     alt={"hero-i"}/>
                 <figcaption className={"caption"}>Here Yo can learn and buy <br/>many things</figcaption>
             </figure>
 
