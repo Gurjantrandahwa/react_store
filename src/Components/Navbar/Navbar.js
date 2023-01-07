@@ -5,14 +5,16 @@ import {FiShoppingCart} from "react-icons/fi";
 import {CgClose, CgMenu} from "react-icons/cg";
 import {Button} from "@mui/material";
 import {useCartContext} from "../../Common/Context/cart_context";
-
+import {useAuth0} from "@auth0/auth0-react";
 
 export default function Navbar() {
     const [menuIcon, setMenuIcon] = useState()
-    const {total_item}=useCartContext()
+    const {total_item} = useCartContext()
+    const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
+
     return <div className={menuIcon ? "navbar active" : "navbar"}>
         <ul className={"nav-lists"} onClick={() => setMenuIcon(false)}
-                   >
+        >
             <li>
                 <NavLink to={"/"}>
                     Home
@@ -33,16 +35,23 @@ export default function Navbar() {
                     Contact
                 </NavLink>
             </li>
-
-            <li>
-                <NavLink to={"/login"}>
+            {isAuthenticated ?<li>
+                <Button
+                    variant={"contained"}
+                    color={"secondary"}
+                    onClick={() => logout({returnTo: window.location.origin})}>
+                    Log Out
+                </Button></li> :
+                <li>
                     <Button
-
-                            variant={"contained"}>
-                        Login
+                        variant={"contained"}
+                        color={"secondary"}
+                        onClick={() => loginWithRedirect()}>Log In
                     </Button>
-                </NavLink>
-            </li>
+                </li>
+
+            }
+
             <li>
                 <NavLink to={"/cart"} className={"cart-link"}>
                     <FiShoppingCart className={"cart-trolley"}/>
