@@ -28,7 +28,7 @@ const AppProvider = ({children}) => {
     // api call for single product
 
     const getSingleProduct = async (url) => {
-        dispatch({type: "SET_SINGLE_LOADING"})
+        dispatch({type: "SET_LOADING"})
         try {
             const res = await axios.get(url)
             const singleProduct = await res.data
