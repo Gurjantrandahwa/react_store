@@ -26,9 +26,7 @@ export default function HeroSection() {
                      alt={"hero-i"}/>
                 <figcaption className={"caption"}>Here Yo can learn and buy <br/>many things</figcaption>
             </figure>
-
         </div>
     </div>
 
 }
-//https://pliki.dlahandlu.pl/i/04/64/82/046482_r0_940.jpg

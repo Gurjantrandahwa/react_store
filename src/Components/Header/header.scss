@@ -1,25 +1,29 @@
 .header {
-  padding: 0 2.8rem;
-  height: 6.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
-
-
-  .logo {
-    height: 5rem;
-    width: 5rem;
-    object-fit: cover;
-    border-radius: 10px;
+  flex-direction: row;
+  padding: 20px;
+  color: #292D32;
+  p{
+    font-size: 14px!important;
   }
   a{
-    color: rgba(194, 3, 255, 0.92);
+    color: #292D32;
+
+  }
+
+  .right-header-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+
+    .right-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+    }
   }
 
 }
-
-@media screen and (max-width: 768px) {
-
-}
-

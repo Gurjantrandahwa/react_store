@@ -32,14 +32,7 @@ export default function FilterProducts() {
 
     return <div className={"filter-p-container"}>
         <form onSubmit={(e) => e.preventDefault()}>
-            <TextField
-                label={"Search"}
-                variant={"outlined"}
-                size={"small"}
-                type={"text"}
-                name={"text"}
-                value={text}
-                onChange={updateFilterValue}/>
+
         </form>
         <div>
             <Typography variant={"h5"}>
