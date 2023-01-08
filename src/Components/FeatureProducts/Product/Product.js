@@ -1,8 +1,8 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import "./FeatureProduct.scss";
+import "../FeatureProduct.scss";
 import {Typography} from "@mui/material";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../../Helpers/FormatPrice";
 
 export default function Product(current) {
     const {id,name,image,price,category}=current;

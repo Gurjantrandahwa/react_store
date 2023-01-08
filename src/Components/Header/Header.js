@@ -38,8 +38,6 @@ export default function Header() {
             </div>
     </div>
         <Search/>
-
-        {/*<Navbar/>*/}
-
+        <Navbar/>
     </div>
 }

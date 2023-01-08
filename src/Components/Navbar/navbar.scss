@@ -1,8 +1,35 @@
 .navbar {
+  display: flex;
+  background-color: #F4F4F4;
+  padding: 20px 50px;
+  align-items: center;
+  justify-content: space-between;
+  height: 61px;
 
-a{
-  color: white!important;
-}
+  form {
+    background-color: #EDA415;
+
+    select {
+      border: none;
+      outline: none;
+      color: white;
+      background-color: #EDA415;
+      cursor: pointer;
+      height: 60px;
+      margin: 0 5px;
+      text-transform: capitalize;
+
+      option {
+        cursor: pointer !important;
+        text-transform: capitalize;
+        padding: 10px;
+      }
+    }
+  }
+
+  a {
+    color: #161515 !important;
+  }
 
   .nav-lists {
     display: flex;
@@ -15,50 +42,22 @@ a{
       text-decoration: none;
       font-size: 1rem;
       font-weight: 500;
-      text-transform: uppercase;
-      color: white!important;
+      color: white !important;
       transition: color 0.3s linear;
+
       :hover {
         text-decoration: none;
-        color: mediumvioletred!important;
+        color: #003F62 !important;
         transition: color 0.2s linear;
       }
 
       :focus {
-        color: mediumvioletred!important;
+        color: #003F62 !important;
       }
-    }
-
-  }
-
-  .cart-link {
-    position: relative;
-
-    .cart-trolley {
-      position: relative;
-      font-size: 1.5rem;
-    }
-
-    .cart-value {
-      width: 1.5rem;
-      height: 1.5rem;
-      position: absolute;
-      background-color: #0e0b0b;
-      color: #ffffff;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      top: -110%;
-      left: 70%;
-
     }
   }
 
 }
-
-
-
-
 
 // mobile navbar
 
@@ -88,7 +87,7 @@ a{
   }
   .menu-icon {
     font-size: 1.8rem;
-    color: mediumvioletred;
+    color: #003F62;
 
   }
   .active .menu-icon {
@@ -104,6 +103,7 @@ a{
   .active .close-icon {
     display: inline-block;
   }
+
   .nav-lists {
     width: 100vw;
     height: 100vh;
@@ -120,7 +120,6 @@ a{
     transition: all 2s linear;
     background-color: #161515;
 
-
   }
   .active .nav-lists {
     visibility: visible;
@@ -134,6 +133,6 @@ a{
     font-size: 1.8rem;
   }
   a {
-    color: black;
+    color: #003F62;
   }
 }

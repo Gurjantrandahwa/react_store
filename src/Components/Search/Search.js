@@ -6,9 +6,11 @@ import {BsPerson} from "react-icons/bs";
 import {RiShoppingCartLine} from "react-icons/ri";
 import {useFilterContext} from "../../Common/Context/filter_context";
 import {useCartContext} from "../../Common/Context/cart_context";
+import {useAuth0} from "@auth0/auth0-react";
 
 export default function Search() {
     const {total_item} = useCartContext()
+    const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
     const {
         filters: {text},
         updateFilterValue
@@ -39,13 +41,20 @@ export default function Search() {
         </div>
         {/*Sign In*/}
         <div className={"cart-wrapper"}>
+            {isAuthenticated ?
+                <Button
+                    startIcon={<BsPerson/>}
+                    onClick={() => logout({returnTo: window.location.origin})}>
+                    Log out
+                </Button> :
 
-            <Button startIcon={<BsPerson/>}>Sign in</Button>
+                <Button
+                    startIcon={<BsPerson/>}
+                    onClick={() => loginWithRedirect()}>Log in
+                </Button>
+            }
             <NavLink to={"/cart"}>
             <div className={"single-cart"}>
-
-
-
                 <div style={{display: "flex", gap: "4px"}}>
                     <RiShoppingCartLine/>
                     <Typography className={"cart-total"}>{total_item}</Typography>

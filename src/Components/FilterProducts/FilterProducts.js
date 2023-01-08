@@ -31,9 +31,7 @@ export default function FilterProducts() {
     const colorsData = getUniqueData(all_products, "colors")
 
     return <div className={"filter-p-container"}>
-        <form onSubmit={(e) => e.preventDefault()}>
 
-        </form>
         <div>
             <Typography variant={"h5"}>
                 Category

@@ -1,32 +1,66 @@
 import React from "react";
 import "./heroSection.scss";
-import {Button} from "@mui/material";
-import {NavLink} from "react-router-dom";
+import {useProductContext} from "../../Common/Context/productContext";
+import {Carousel} from 'react-carousel-minimal';
 
 export default function HeroSection() {
+    const {featureProducts} = useProductContext();
 
-    return <div className={"hero-wrapper"}
-                style={{
-                    backgroundImage: `url("https://freepngimg.com/download/abstract/125638-abstract-graphic-design-free-png-hq.png")`,
-                }}>
-        <div className={"hero-wrapper-data"}>
-            <h1>Global Store</h1>
-            <p>
-                Here you can buy things as your preference.
-            </p>
-            <NavLink to={"/products"}>
-                <Button variant={"contained"}>
-                    Shop now
-                </Button>
-            </NavLink>
-        </div>
-        <div className={"hero-img"}>
-            <figure>
-                <img src={"https://i.pinimg.com/564x/73/81/3b/73813bf6b6ab4d402cc3d5bcfe9809a7.jpg"}
-                     alt={"hero-i"}/>
-                <figcaption className={"caption"}>Here Yo can learn and buy <br/>many things</figcaption>
-            </figure>
-        </div>
+    console.log(featureProducts)
+
+    const data = [
+        {
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/GoldenGateBridge-001.jpg/1200px-GoldenGateBridge-001.jpg",
+            caption: "San Francisco"
+        },
+        {
+            image: "https://cdn.britannica.com/s:800x450,c:crop/35/204435-138-2F2B745A/Time-lapse-hyper-lapse-Isle-Skye-Scotland.jpg",
+            caption: "Scotland"
+        },
+        {
+            image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+            caption: "Darjeeling"
+        },
+
+    ];
+
+    const captionStyle = {
+        fontSize: '2em',
+        fontWeight: 'bold',
+    }
+    const slideNumberStyle = {
+        fontSize: '20px',
+        fontWeight: 'bold',
+    }
+    return <div style={{
+        padding: "0 20px"
+    }}>
+        <Carousel
+            data={data}
+            time={6000}
+            width="1300px"
+            height="500px"
+            captionStyle={captionStyle}
+            slideNumber={true}
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="cover"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+                textAlign: "center",
+                maxWidth: "1300px",
+                maxHeight: "500px",
+                margin: "auto",
+                objectFit: "contain"
+            }}
+        />
     </div>
+
 
 }

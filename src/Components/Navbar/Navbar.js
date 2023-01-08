@@ -1,28 +1,55 @@
 import React, {useState} from "react";
 import "./navbar.scss";
 import {NavLink} from "react-router-dom";
-import {FiShoppingCart} from "react-icons/fi";
 import {CgClose, CgMenu} from "react-icons/cg";
-import {Button} from "@mui/material";
-import {useCartContext} from "../../Common/Context/cart_context";
-import {useAuth0} from "@auth0/auth0-react";
+import { Typography} from "@mui/material";
+import {useFilterContext} from "../../Common/Context/filter_context";
+
 
 export default function Navbar() {
     const [menuIcon, setMenuIcon] = useState()
-    const {total_item} = useCartContext()
-    const {loginWithRedirect, isAuthenticated, logout} = useAuth0();
-
+    const {updateFilterValue, all_products} = useFilterContext();
+    const getUniqueData = (data, property) => {
+        let newValue = data.map((elem) => {
+            return elem[property]
+        });
+        if (property === "colors") {
+            newValue = newValue.flat();
+        }
+        return newValue = ["Browser categories", ...new Set(newValue)]
+    }
+    const categoryData = getUniqueData(all_products, "category")
     return <div className={menuIcon ? "navbar active" : "navbar"}>
-        <ul className={"nav-lists"} onClick={() => setMenuIcon(false)}
-        >
+
+            <form action={"#"}>
+                <label htmlFor={"category"}> </label>
+                <NavLink to={"/products"} >
+                <select
+                    id="category"
+                    name={"category"}
+                    onClick={updateFilterValue}
+                >
+                    {categoryData.map((elem, index) => {
+                        return  <option
+                                key={index}
+                                value={elem}
+                            >
+                                {elem}
+                            </option>
+                    })}
+                </select>
+                </NavLink>
+            </form>
+
+        <ul className={"nav-lists"} onClick={() => setMenuIcon(false)}>
             <li>
                 <NavLink to={"/"}>
                     Home
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/about"}>
-                    About
+                <NavLink to={"/catalog"}>
+                    Catalog
                 </NavLink>
             </li>
             <li>
@@ -31,33 +58,23 @@ export default function Navbar() {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/contact"}>
-                    Contact
+                <NavLink to={"/pages"}>
+                    Pages
                 </NavLink>
             </li>
-            {isAuthenticated ?
-                <Button
-                    variant={"contained"}
-                    color={"secondary"}
-                    onClick={() => logout({returnTo: window.location.origin})}>
-                    Log Out
-                </Button> :
-
-                    <Button
-                        variant={"contained"}
-                        color={"secondary"}
-                        onClick={() => loginWithRedirect()}>Log In
-                    </Button>
-
-            }
-
             <li>
-                <NavLink to={"/cart"} className={"cart-link"}>
-                    <FiShoppingCart className={"cart-trolley"}/>
-                    <span className={"cart-value"}>{total_item}</span>
+                <NavLink to={"/about"}>
+                    About us
                 </NavLink>
             </li>
         </ul>
+        <div>
+            <Typography sx={{
+                color: "#003F62",
+                fontWeight: 600,
+                fontSize: "14px"
+            }}>30 Days Free Return</Typography>
+        </div>
 
         {/*mobile*/}
         <div className={"mobile-navbar-btn"}>

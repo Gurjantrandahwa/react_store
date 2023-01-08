@@ -1,5 +1,5 @@
 .search-wrapper {
-  padding: 20px;
+  padding: 20px 50px;
   background: #003F62;
   display: flex;
   align-items: center;
@@ -38,7 +38,16 @@
       outline: none;
       width: 280px;
       margin: 10px;
-      background: none !important;
+      background: white !important;
+
+      ::selection {
+        background-color: white !important;
+      }
+
+      ::after {
+        background-color: white !important;
+      }
+
     }
 
     button {
@@ -52,6 +61,7 @@
       font-size: 14px !important;
       height: 44px;
     }
+
   }
 
   //  cart
@@ -60,9 +70,11 @@
     align-items: center;
     gap: 20px;
     color: white;
-a{
-  color: white;
-}
+
+    a {
+      color: white;
+    }
+
     .cart-total {
       background-color: #EDA415;
 

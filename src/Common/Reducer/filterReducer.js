@@ -79,7 +79,7 @@ const filterReducer = (state, action) => {
                     return item.name.toLowerCase().includes(text);
                 })
             }
-            if (category !== "all") {
+            if (category !== "Browser categories") {
                 tempFilterProduct = tempFilterProduct.filter(
                     (item) => item.category === category)
             }

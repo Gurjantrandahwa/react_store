@@ -39,9 +39,9 @@ const AppProvider = ({children}) => {
     }
     useEffect(() => {
         getProducts(API)
-        //     .catch((err) => {
-        //     console.log(err)
-        // })
+            .catch((err) => {
+            console.log(err)
+        })
     }, []);
 
     return <AppContext.Provider value={{...state,getSingleProduct}}>

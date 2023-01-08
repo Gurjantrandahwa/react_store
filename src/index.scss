@@ -7,7 +7,7 @@
 
 
 html {
-  overflow-x: hidden;
+  //overflow-x: hidden;
   line-height: 1.5;
 }
 
@@ -26,7 +26,7 @@ li {
 }
 
 body {
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
 }
 
@@ -71,7 +71,7 @@ p {
   display: flex;
   margin: auto;
   justify-content: center;
-  padding: 3rem 6rem;
+  padding: 6rem;
 
 }
 
@@ -82,20 +82,25 @@ p {
 
 .color-btn {
 
-  border-radius: 50%!important;
+  border-radius: 50% !important;
   opacity: 0.5;
   padding: 10px;
-  color: white!important;
+  color: white !important;
   border: none;
   width: 35px;
   height: 35px;
+
   &:hover {
     opacity: 1;
   }
 }
 
 
-
 .color-btn-active {
   opacity: 1;
+}
+
+.active {
+  text-decoration: none;
+  background: none !important;
 }
