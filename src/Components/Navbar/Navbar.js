@@ -16,7 +16,7 @@ export default function Navbar() {
         if (property === "colors") {
             newValue = newValue.flat();
         }
-        return newValue = ["Browser categories", ...new Set(newValue)]
+        return newValue = ["all", ...new Set(newValue)]
     }
     const categoryData = getUniqueData(all_products, "category")
     return <div className={menuIcon ? "navbar active" : "navbar"}>
@@ -29,6 +29,7 @@ export default function Navbar() {
                     name={"category"}
                     onClick={updateFilterValue}
                 >
+                    <option disabled>Browse categories</option>
                     {categoryData.map((elem, index) => {
                         return  <option
                                 key={index}

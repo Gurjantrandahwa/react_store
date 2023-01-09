@@ -1,25 +1,53 @@
 .brand {
-  background-color: #f1edff;
-  text-align: center;
-  padding: 3rem 5rem 10rem 3rem;
-  letter-spacing: 1.2px;
-  text-transform: capitalize;
-
-  h3 {
-    color: mediumvioletred;
-  }
+  background-color: #E2F4FF;
+  border-radius: 20px;
+  margin: 30px;
+  min-height: 155px;
+  max-height: fit-content;
 
   .brands-wrapper {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 4rem;
-    justify-content: center;
-    margin-top: 2rem;
+    flex-direction: row;
 
-    img {
-      width: 100px;
-      height: 50px;
-      object-fit: cover;
+    .single-brand {
+      display: flex;
+      align-items: center;
+      gap: 31px;
+      flex-direction: row;
+      margin: 35px;
+
+      .brand-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        color: #003F62;
+
+        h6 {
+          font-weight: 600;
+          font-size: 22.09px;
+          line-height: 33px;
+
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+        }
+      }
+
+      svg {
+        width: 67px;
+        height: 67px;
+        color: #EDA415;
+
+      }
     }
   }
+
+
 }

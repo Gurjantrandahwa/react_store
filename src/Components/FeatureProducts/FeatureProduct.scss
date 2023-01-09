@@ -1,26 +1,21 @@
 
 .feature-container {
-  padding: 3rem 6rem;
   margin-top: 60px;
+  padding: 20px 50px;
+
+  .popular-header {
+    font-weight: 600;
+    font-size: 28px;
+    color: #003F62;
+    line-height: 41px;
+    margin-bottom: 30px;
+  }
 
   .features-products {
     display: flex;
-    gap: 20px;
+    //gap: 37px;
     flex-wrap: wrap;
-    justify-content: space-around;
-
-    img {
-      width: 230px;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    img:hover {
-      -webkit-animation: flash 3s;
-      animation: flash 3s;
-
-
-    }
+    justify-content: space-between;
   }
 }
 
@@ -43,31 +38,43 @@
 }
 
 .card {
-  background-color: #fed4d4;
-  padding: 10px 0;
-  position: relative;
-  border-radius: 10px;
+  border: 1px solid #B6B6B6;
+  height: 314px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px 0;
 
-  .card-category {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    background-color: #310a33;
-    color: white;
-    padding: 5px;
-    text-transform: uppercase;
-    font-size: 12px;
+  img {
+    width: 190px;
+    height: 175px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  img:hover {
+    //-webkit-animation: flash 3s;
+    //animation: flash 3s;
   }
 
   .card-data {
     display: flex;
-    justify-content: space-between;
     text-transform: capitalize;
-    align-items: center;
-    padding: 0 10px;
+    flex-direction: column;
+    padding: 10px 20px;
+    gap: 5px;
 
-    p {
-      font-size: 14px;
+    .p-name {
+      color: #003F62;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .p-price{
+      color: #4A4A4A;
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 

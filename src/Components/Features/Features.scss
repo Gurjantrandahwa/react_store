@@ -1,25 +1,49 @@
 .features-wrapper {
-  padding: 5rem 0;
-  display: flex;
-  gap: 3.7rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-flex-wrap: wrap;
-  .single-feature {
-    width: 250px;
-    height: 300px;
-  }
 
-  h3 {
-    font-size: 17px;
-    margin-top: 5px;
-    color: mediumvioletred;
-  }
+  margin: 60px 0;
+  position: relative;
 
   img {
-    width: 250px;
-    height: 250px;
+    width: 1200px;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    height: 360px;
     object-fit: cover;
+    border-radius: 24px;
+  }
+
+  .caption-button {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    text-align: center;
+
+    h5 {
+      color: #2E8FC5;
+      font-weight: 600;
+      font-size: 41px;
+      line-height: 62px;
+    }
+
+    p {
+      color: white;
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 27px
+    }
+
+    button {
+      text-transform: capitalize;
+      margin: 20px 0;
+      background-color: #EDA415;
+      color: white;
+      font-weight: 500 !important;
+      border-radius: 20px;
+      padding: 5px 20px;
+    }
+
   }
 }

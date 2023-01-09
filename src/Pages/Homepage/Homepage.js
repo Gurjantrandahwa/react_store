@@ -8,11 +8,10 @@ import FeatureProducts from "../../Components/FeatureProducts/FeatureProducts";
 export default function Homepage() {
 
     return <div className={"homepage-wrapper"}>
-
         <HeroSection />
-        {/*<FeatureProducts/>*/}
-        {/*<Features/>*/}
-        {/*<Brands/>*/}
+        <FeatureProducts/>
+        <Features/>
+        <Brands/>
     </div>
 
 }

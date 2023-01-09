@@ -53,9 +53,9 @@ export default function SingleProduct() {
                         {name}
                     </Typography>
                     <Rating stars={stars}
-                            reviews={reviews}
-                    />
 
+                    />
+                    <Typography>  ({reviews} customers review)</Typography>
                     <Typography className={"product-price"}>
                         MRP:
                         <del>
