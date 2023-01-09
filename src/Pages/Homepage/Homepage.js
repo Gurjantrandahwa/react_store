@@ -12,6 +12,7 @@ export default function Homepage() {
         <FeatureProducts/>
         <Features/>
         <Brands/>
+        <Homepage/>
     </div>
 
 }
