@@ -1,18 +1,18 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import {useProductContext} from "../../Common/Context/productContext";
 import "./singleProduct.scss";
-import {CircularProgress, Typography} from "@mui/material";
+import {Button, CircularProgress, Divider, Typography} from "@mui/material";
 import FormatPrice from "../../Common/Helpers/FormatPrice";
-import {TbReplace, TbTruckDelivery} from "react-icons/tb";
-import {MdOutlineDeliveryDining, MdSecurity} from "react-icons/md";
 import ProductImages from "../../Components/ProductImages/ProductImages";
 import Rating from "../../Components/Rating/Rating";
 import AddToCart from "../../Components/AddToCart/AddToCart";
 import {ChevronRight} from "@mui/icons-material";
+import {AiOutlineCheck} from "react-icons/ai";
 
 export default function SingleProduct() {
     const {getSingleProduct, isLoading, singleProduct} = useProductContext();
+    const [desc,setDescr]=useState(false)
     const API = "https://api.pujakaitem.com/api/products";
     const {id} = useParams();
 
@@ -51,79 +51,82 @@ export default function SingleProduct() {
             </div>
 
             {/*Text*/}
-            <div className={"sp-text-wrapper"}>
-                <div style={{margin:"40px 0px"}}>
-                    <Typography variant={"h4"} textTransform={"capitalize"}>
+            <div>
+                <div className={"product-name-wrapper"}>
+                    <Typography variant={"h5"}>
                         {name}
                     </Typography>
-                    <Rating stars={stars}
-
-                    />
-                    <Typography>  ({reviews} customers review)</Typography>
-                    <Typography className={"product-price"}>
-                        MRP:
-                        <del>
-                            <FormatPrice price={price + 250000}/>
-                        </del>
+                    <Typography>
+                        <FormatPrice price={price}/>
                     </Typography>
-                    <Typography variant={""} color={"mediumvioletred"}>
-                        Deal of the Day: <FormatPrice price={price}/>
-                    </Typography>
-                    <Typography variant={"body2"}>{description}</Typography>
-                    <div className={"data-qualities"}>
-                        {
-                            [
-                                {
-                                    icon: <TbTruckDelivery/>,
-                                    title: "Free delivery"
-                                },
-                                {
-                                    icon: <TbReplace/>,
-                                    title: "10 Days replacement"
-                                },
-                                {
-                                    icon: <MdOutlineDeliveryDining/>,
-                                    title: "delivered"
-                                },
-                                {
-                                    icon: <MdSecurity/>,
-                                    title: "Warranty"
-                                },
-                            ].map(((value, index) => {
-                                return <div key={index}>
-                                    <div className={"data-qualities-icons"}>
-
-                                        {value.icon}
-                                    </div>
-
-                                    <Typography variant={"caption"}>
-                                        {value.title}
-                                    </Typography>
-                                </div>
-                            }))
-                        }
-                    </div>
-                    <hr className={"line"}/>
-                    <div className={"stock"}>
-                        <Typography variant={"body1"} color={"mediumvioletred"}>
-                            Available: {stock > 0 ? "In Stock" : "Not Available"}
-                        </Typography>
-                        <Typography variant={"body1"} color={"mediumvioletred"}>
-                            Brand:{category}
-                        </Typography>
-                        <Typography variant={"body1"} color={"mediumvioletred"}>
-                            Company:{company}
-                        </Typography>
-                    </div>
-                    <hr className={"line"}/>
-                    {
-                        stock>0 &&<AddToCart product={singleProduct}/>
-                    }
+                </div>
+                <div className={"rating-wrapper"}>
+                    <Rating stars={stars}/>
+                    <Typography> {reviews} customer reviews</Typography>
                 </div>
 
+                <div className={"stock"}>
+                    <Typography>
+                        Availability :
+                    </Typography>
+                    <div className={"stock-check"}>
+                        {stock > 0 ? <AiOutlineCheck/> : null}
+                        {stock > 0 ? "In stock" : "Not Available"}
+
+                    </div>
                 </div>
+                <Typography className={"stock-length"}>
+                    Hurry up! only {stock} product left in stock!
+                </Typography>
+
+                <Divider color={"#BDBDBD"}/>
+                {
+                    stock > 0 && <AddToCart product={singleProduct}/>
+                }
+                <Divider color={"#BDBDBD"}/>
+                <div className={"company-wrapper"}>
+                    <div>
+                        <Typography variant={"h5"}>
+                            Category :
+                        </Typography>
+                        <Typography>
+                            {category}
+                        </Typography>
+                    </div>
+                    <div>
+                        <Typography variant={"h5"}>
+                            Company :
+                        </Typography>
+                        <Typography> {company}</Typography>
+                    </div>
+
+
+                </div>
+
+            </div>
 
         </div>
+        <div className={"description-wrapper-buttons"}>
+
+            <Button
+                onClick={()=>{setDescr(true)}}
+                className={"des-btn"}
+            >
+                Description
+            </Button>
+            <Button
+                className={"review-btn"}
+            >
+                Reviews
+            </Button>
+
+
+        </div>
+        {
+            desc &&
+            <Typography variant={"body2"}>{description}</Typography>
+        }
+
 
     </div>
 }

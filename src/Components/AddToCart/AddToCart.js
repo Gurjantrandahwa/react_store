@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./AddToCart.scss";
-import {Alert, Button, Typography} from "@mui/material";
+import {Alert, Button, Divider, Typography} from "@mui/material";
 import {FaCheck} from "react-icons/fa";
 import CartAmount from "../CartAmount/CartAmount";
 import {NavLink} from "react-router-dom";
@@ -12,7 +12,6 @@ export default function AddToCart({product}) {
     const {id, colors, stock} = product;
     const [color, setColor] = useState(colors[0])
     const [amount, setAmount] = useState(1)
-    const [message, setMessage] = useState(`Sorry We just have ${stock} items in our stock`)
 
 
     const setDecrease = () => {
@@ -24,48 +23,54 @@ export default function AddToCart({product}) {
 
     }
 
-    return <div>
-        <Typography variant={"body1"} className={"colors"}>
-            Colors:
+    return <div className={"cart"}>
+        <div className={"cart-colors"}>
+            <Typography>
+                Color :
+            </Typography>
             {
                 colors.map((curColor, index) => {
                     return <button key={index}
                                    style={{backgroundColor: curColor}}
-                                   className={color === curColor ? "color-btn color-btn-active" : "color-btn"}
+                                   className={color === curColor ? "cart-color-btn cart-color-btn-active" : "cart-color-btn"}
                                    onClick={() => {
                                        setColor(curColor)
                                    }}>
-                        {color === curColor ? <FaCheck/> : null}
+
                     </button>
                 })
             }
-        </Typography>
-        {/*Add to cart*/}
-        <div style={{paddingBottom: "30px"}}>
-            <CartAmount
-                amount={amount}
-                setDecrease={setDecrease}
-                setIncrease={setIncrease}/>
-            {
-                amount === stock ?
-                    <Alert
+        </div>
 
-                        severity={"warning"}
-                        // variant={"outlined"}
-                    >{message}
-                    </Alert> : ""
-            }
+
+        {/*Add to cart*/}
+        <div className={"quantity-wrapper"}>
+            <Typography>Quantity :</Typography>
+            <div>
+                <CartAmount
+                    amount={amount}
+                    setDecrease={setDecrease}
+                    setIncrease={setIncrease}/>
+            </div>
 
         </div>
-        <NavLink to={"/cart"}
-                 onClick={() => addToCart(id, color, amount, product)}
-        >
-            <Button variant={"contained"} color={"secondary"}
+        <div className={"add-cart-buttons"}>
+            <NavLink to={"/cart"}
+                     onClick={() => addToCart(id, color, amount, product)}
+            >
+                <Button>
+                    Add To cart
+                </Button>
+            </NavLink>
+            <NavLink to={"/cart"}
+                     onClick={() => addToCart(id, color, amount, product)}
+            >
+                <Button>
+                   Buy it now
+                </Button>
+            </NavLink>
+        </div>
 
-                    sx={{textTransform: "capitalize"}}>
-                Add To cart
-            </Button>
-        </NavLink>
 
     </div>
 }

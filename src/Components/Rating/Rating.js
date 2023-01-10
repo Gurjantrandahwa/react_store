@@ -9,10 +9,10 @@ const Rating = ({stars}) => {
         return <span key={index}>
             {
                 stars >= index + 1
-                    ? <FaStar color={"grey"} size={20}/>
+                    ? <FaStar color={"#EDA415"} size={20}/>
                     : stars >= number
-                        ? <FaStarHalfAlt color={"grey"} size={20}/>
-                        : <AiOutlineStar color={"grey"} size={20}/>
+                        ? <FaStarHalfAlt color={"#EDA415"} size={20}/>
+                        : <AiOutlineStar color={"#EDA415"} size={20}/>
             }
         </span>
     });

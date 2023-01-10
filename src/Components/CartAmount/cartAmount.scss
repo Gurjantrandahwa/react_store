@@ -1,8 +1,23 @@
-.cart-amount{
+.cart-amount {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  gap: 10px;
-  padding: 20px 0;
+  margin-left: 15px;
 
+  button {
+    color: #434343;
+    font-weight: 500;
+    line-height: 27px;
+    background: #EEEEEE;
+    border: 1px solid #BDBDBD;
+    padding: 5px 8px;
+    display: flex;
+    cursor: pointer;
+  }
+  .amount{
+    border: 1px solid #BDBDBD;
+    background: #EEEEEE;
+    padding: 0 20px;
+    display: flex;
+    width: 35px;
+  }
 }

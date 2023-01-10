@@ -5,13 +5,12 @@ import {FaMinus,  FaPlus} from "react-icons/fa";
 
 export default function CartAmount({amount, setDecrease, setIncrease}) {
     return <div className={"cart-amount"}>
-        <Button onClick={() => setDecrease()} >
+        <button onClick={() => setDecrease()} >
             <FaMinus/>
-
-        </Button>
-        <div>{amount}</div>
-        <Button onClick={() => setIncrease()}>
+        </button>
+        <div className={"amount"}>{amount}</div>
+        <button onClick={() => setIncrease()}>
             <FaPlus/>
-        </Button>
+        </button>
     </div>
 }

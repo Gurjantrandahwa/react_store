@@ -1,0 +1,30 @@
+.main-image {
+
+
+  img {
+    border: 1px solid #ACACAC;
+    border-radius: 20px;
+    width: 647px;
+    height: 461px;
+    object-fit: cover;
+    padding: 70px 50px;
+  }
+
+
+}
+
+.bottom-images {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+
+  img {
+    border: 1px solid #ACACAC;
+    border-radius: 20px;
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
