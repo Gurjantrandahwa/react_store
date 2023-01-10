@@ -10,9 +10,8 @@ export default function ProductHeader() {
     const {filter_products, grid_view, setGridView, setListView,sorting } = useFilterContext()
     return <div className={"product-header"}>
 
-        <div>
+        <div >
             <IconButton
-                sx={{marginRight: "15px"}}
                 className={grid_view ? "icon-button-h-active icon-button-h" : "icon-button-h"}
                 onClick={setGridView}>
                 <BsFillGridFill/>
@@ -24,7 +23,7 @@ export default function ProductHeader() {
         </div>
 
         <div>
-            <Typography color={"mediumvioletred"}>
+            <Typography variant={"h5"}>
                 {`${filter_products.length} Products available`}
             </Typography>
 
@@ -33,7 +32,7 @@ export default function ProductHeader() {
             <form action={"#"}>
                 <label htmlFor={"sort"}> </label>
                 <select
-                    className={"dropdown-filter"}
+
                     id="sort"
                     name={"sort"}
                     onClick={sorting}

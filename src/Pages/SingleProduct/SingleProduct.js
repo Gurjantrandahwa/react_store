@@ -6,9 +6,10 @@ import {CircularProgress, Typography} from "@mui/material";
 import FormatPrice from "../../Common/Helpers/FormatPrice";
 import {TbReplace, TbTruckDelivery} from "react-icons/tb";
 import {MdOutlineDeliveryDining, MdSecurity} from "react-icons/md";
-import Images from "../../Components/Images/Images";
+import ProductImages from "../../Components/ProductImages/ProductImages";
 import Rating from "../../Components/Rating/Rating";
 import AddToCart from "../../Components/AddToCart/AddToCart";
+import {ChevronRight} from "@mui/icons-material";
 
 export default function SingleProduct() {
     const {getSingleProduct, isLoading, singleProduct} = useProductContext();
@@ -38,12 +39,15 @@ export default function SingleProduct() {
     return <div>
         <div className={"name-link"}>
             {/*<AiOutlineHome/>*/}
-            <NavLink to={"/"}>Home</NavLink>/ {name}
+            <NavLink to={"/"}>Home</NavLink>
+            <ChevronRight/>
+            <Typography>{name}</Typography>
+            <ChevronRight/>
         </div>
 
         <div className={"single-product-wrapper"}>
-            <div className={"sp-images-wrapper"}>
-                <Images images={image}/>
+            <div>
+                <ProductImages images={image}/>
             </div>
 
             {/*Text*/}

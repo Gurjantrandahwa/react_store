@@ -1,23 +1,33 @@
+.category-header{
+  background: #FDFDFD;
+  padding: 20px 50px;
+
+  div{
+    display: flex;
+    align-items: center;
+  }
+}
+
 .products-wrapper {
-  margin: 5rem;
+  margin: 3rem 1rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 
 }
 
 .main-products {
   display: flex;
   flex-direction: column;
-  flex: 1;
+
 }
 
 @media screen and (max-width: 768px) {
 
   .products-wrapper {
-    border: none;
-    justify-content: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    //border: none;
+    //justify-content: center;
+    //margin: auto;
+    //display: flex;
+    //flex-direction: column;
   }
 }

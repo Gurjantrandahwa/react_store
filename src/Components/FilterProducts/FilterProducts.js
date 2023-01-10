@@ -1,9 +1,10 @@
 import React from "react";
 import "./FilterProducts.scss";
-import {Button, TextField, Typography} from "@mui/material";
+import {Button, Checkbox, Divider, Typography} from "@mui/material";
 import {useFilterContext} from "../../Common/Context/filter_context";
 import {FaCheck} from "react-icons/fa";
 import FormatPrice from "../../Common/Helpers/FormatPrice";
+import {ChevronRight} from "@mui/icons-material";
 
 export default function FilterProducts() {
     const {
@@ -32,11 +33,11 @@ export default function FilterProducts() {
 
     return <div className={"filter-p-container"}>
 
-        <div>
+        <div className={"category-data"}>
             <Typography variant={"h5"}>
-                Category
+                Categories
             </Typography>
-            <div className={"category-data"}>
+
                 {categoryData.map((elem, index) => {
                     return <Button
                         key={index}
@@ -45,14 +46,16 @@ export default function FilterProducts() {
                         value={elem}
                         onClick={updateFilterValue}
                     >
+                        {/*<Checkbox onChange={updateFilterValue} value={elem} name={"category"}/>*/}
                         {elem}
                     </Button>
                 })}
             </div>
-        </div>
+        <Divider/>
         <div>
-            <Typography variant={"h5"}>Company</Typography>
+
             <form action={"#"}>
+                <Typography variant={"h5"}>Product type</Typography>
                 <select
                     className={"company-select"}
                     name={"company"}
@@ -73,23 +76,13 @@ export default function FilterProducts() {
                 </select>
             </form>
         </div>
-        <div>
+        <Divider/>
+        <div className={"colors-container"}>
             <Typography variant={"h5"}>Colors</Typography>
             <div className={"color-wrapper"}>
+
                 {
                     colorsData.map((curColor, index) => {
-                        if (curColor === "all") {
-                            return <Button
-                                sx={{textTransform: "none"}}
-                                type={"button"}
-                                key={index}
-                                value={curColor}
-                                name={"color"}
-                                onClick={updateFilterValue}
-                            >
-                                All
-                            </Button>
-                        }
                         return <button
                             className={color === curColor ? "color-btn color-btn-active" : "color-btn"}
                             type={"button"}
@@ -108,15 +101,13 @@ export default function FilterProducts() {
             </div>
 
         </div>
-
-        <div>
+        <Divider/>
+        <div className={"range-wrapper"}>
             <Typography
-                sx={{marginTop:"10px"}}
                 variant={"h5"}>Price</Typography>
 
             <Typography
-                variant={"subtitle1"}
-                color={"secondary"}
+
             >
                 <FormatPrice price={price}/>
             </Typography>
@@ -130,12 +121,11 @@ export default function FilterProducts() {
                 name={"price"}
             />
         </div>
-
+        <Divider/>
         <div>
             <Button
+                className={"clear-filter"}
                 variant={"contained"}
-                color={"error"}
-                sx={{marginTop:"20px"}}
                 onClick={clearFilters}
             >
                 Clear filters

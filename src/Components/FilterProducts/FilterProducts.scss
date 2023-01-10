@@ -1,56 +1,107 @@
 .filter-p-container {
   padding: 20px;
   border-radius: 10px;
-  max-width: fit-content;
-  justify-content: center;
-  margin: auto;
   background-color: white;
-  color: black;
-  border: 1px solid #161515;
 
-  form {
-    margin-bottom: 20px;
+  h5 {
+    color: #003F62;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   .category-data {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
     margin-top: 10px;
+    margin-bottom: 20px;
 
     button {
       border: none !important;
-      align-self: flex-start !important;
       background-color: transparent !important;
       text-transform: capitalize !important;
-      //color: black !important;
+      color: #222222 !important;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      justify-content: flex-start;
+      font-size: 16.09px;
+      line-height: 24px;
+    }
+  }
 
+  form {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    select {
+
+      border: none;
+      background-color: #EDA415;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      border-radius: 5px;
+      text-transform: capitalize;
+
+      cursor: pointer;
+      outline: none;
+
+      option {
+        color: white;
+        cursor: pointer !important;
+      }
     }
   }
 
   .company-select {
     padding: 10px;
     margin-top: 10px;
-  }
 
+
+  }
+.colors-container{
+  margin-bottom: 20px;
+  margin-top: 20px;
   .color-wrapper {
     display: flex;
     gap: 8px;
     margin-top: 10px;
 
-    .round-btn {
-      padding: 15px;
-      border: none;
-      border-radius: 50%;
-      opacity: 0.5;
+  }
+}
 
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-        transition: 0.2s;
-      }
+
+  .range-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h5 {
+      margin-bottom: 5px;
     }
 
-  }
+    p {
+      color: #222222;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
 
+    input[type="range" i]::-webkit-slider-runnable-track {
+
+      color: black !important;
+      background-color: #EDA415;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+.clear-filter{
+  background-color: #EDA415!important;
+  //border-radius: 10px;
+  margin-top: 20px;
+  color: white !important;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-transform: none;
+}
 }

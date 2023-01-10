@@ -3,11 +3,26 @@ import "./products.scss";
 import FilterProducts from "../../Components/FilterProducts/FilterProducts";
 import ProductHeader from "../../Components/ProductHeader/ProductHeader";
 import ProductList from "../../Components/ProductList/ProductList";
+import {ChevronRight} from "@mui/icons-material";
+import {Typography} from "@mui/material";
+import Features from "../../Components/Features/Features";
 
 export default function Products() {
 
     return <div>
+        <div className={"category-header"}>
+            <div>
+                <Typography>
+                    Home
+                </Typography>
+                  <ChevronRight/>
+                <Typography>All category</Typography>
+                <ChevronRight/>
+            </div>
+
+        </div>
         <div className={"products-wrapper"}>
+
             {/* Filter Section*/}
             <div>
                 <FilterProducts/>
@@ -24,5 +39,6 @@ export default function Products() {
                 </div>
             </div>
         </div>
+        <Features/>
     </div>
 }

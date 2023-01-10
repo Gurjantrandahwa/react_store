@@ -90,8 +90,15 @@ p {
   padding: 10px;
   color: white !important;
   border: none;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  justify-content: center;
+
+  svg {
+    display: flex;
+
+  }
 
   &:hover {
     opacity: 1;
