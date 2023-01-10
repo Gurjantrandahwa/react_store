@@ -1,0 +1,65 @@
+
+.customer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 50px 30px;
+
+  .customer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 0 16px;
+    gap: 26.17px;
+    width: 432px;
+    height: 242px;
+    border: 1px solid #BABABA;
+    border-radius: 20px;
+
+    .customer-name {
+      display: flex;
+      align-items: center;
+      gap: 37.39px;
+
+      p {
+        color: #003F62;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        line-height: 24px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid #EDA415;
+        padding: 6px;
+        border-style: dashed;
+      }
+    }
+
+    .customer-description {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 375px;
+      height: 82px;
+      background: #E2F4FF;
+      border-radius: 18.695px;
+
+      p {
+        color: #003F62;
+        font-weight: 400;
+        font-size: 13.1707px;
+        line-height: 20px;
+        padding: 10px;
+      }
+    }
+  }
+}
+

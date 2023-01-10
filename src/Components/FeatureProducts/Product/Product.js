@@ -2,7 +2,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import "../FeatureProduct.scss";
 import {Typography} from "@mui/material";
-import FormatPrice from "../../../Helpers/FormatPrice";
+import FormatPrice from "../../../Common/Helpers/FormatPrice";
 import Rating from "../../Rating/Rating";
 import {useProductContext} from "../../../Common/Context/productContext";
 

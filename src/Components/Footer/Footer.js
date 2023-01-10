@@ -1,92 +1,115 @@
 import React from "react";
 import "./footer.scss";
-import {Button, TextField} from "@mui/material";
+import {Divider, IconButton, Typography} from "@mui/material";
+import {FaFacebook, FaGoogle, FaInstagram} from "react-icons/fa";
+import {FiSend} from "react-icons/fi";
+import {CiHeadphones} from "react-icons/ci";
 import {NavLink} from "react-router-dom";
-import {FaDiscord, FaFacebook, FaInstagram} from "react-icons/fa";
 
 export default function Footer() {
     return <div className={"footer"}>
-        <div className={"short-note"}>
-            <div className={"short-note-text"}>
+        {/*newsletter*/}
+        <div className={"newsletter"}>
+            <Typography variant={"h6"}>Subscribe newsletter</Typography>
+            <div className={"newsletter-email"}>
+                <input type={"text"}
+                       placeholder={"Email address"}/>
+                <IconButton>
+                    <FiSend/>
+                </IconButton>
+
+            </div>
+            <div className={"footer-contact"}>
+                <CiHeadphones/>
                 <div>
-                    <h3>Get Started</h3>
-                    <h3>Let's talk today</h3>
+                    <Typography>Call us 24/7 :</Typography>
+                    <Typography>(+91) 0123 456 789</Typography>
                 </div>
-                <NavLink to={"/contact"}>
-                    <Button variant={"contained"} size={"small"}>Contact</Button>
-                </NavLink>
             </div>
         </div>
-        <footer className={"footer-container grid-four-column "}>
-            <div>
-                <h3>Global Store</h3>
-                <p>Reference site about Lorem Ipsum, giving information on its origins</p>
-            </div>
-            <div>
-                <h3>Please subscribe to get important updates</h3>
-                <form action={"#"}>
-                    <TextField
-                        size={"small"}
-                        autoComplete={"off"}
-                        margin={"dense"}
-                        type={"email"}
-                        placeholder={"Your e-mail"}/>
+        {/* footer*/}
 
-                    <div>
-                        <Button
-                            size={"small"}
-                            sx={{
-                                backgroundColor: 'orangered',
-                                textTransform: "none"
-                            }}
-                            variant={"contained"}
-                            type={"submit"}>
-                            Subscribe
-                        </Button>
-                    </div>
+        <footer>
+            {/*logo*/}
+            <div className={"footer-logo-wrapper"}>
+                <NavLink to={"/"}>
+                    <img src={"https://i.pinimg.com/564x/73/8c/66/738c66a1e117f638020803ff8c6a6575.jpg"}
+                         alt={"logo"}/>
+                    <Typography variant={"h6"}>Global Store</Typography>
 
-                </form>
-            </div>
-            <div>
-                <h3>Follow us on These platforms</h3>
-                <div className={"socials"}>
+                </NavLink>
+                <div>
+                    <Typography>
+                        123 street jammy
+                    </Typography>
+                    <Typography>howards, xyz</Typography>
+                </div>
+
+                <Divider color={"lightgray"}/>
+                <div className={"footer-icons"}>
                     {
                         [
                             {
-                                icon: <FaDiscord/>
+                                icon: <FaGoogle/>
                             },
                             {
                                 icon: <FaFacebook/>
                             },
                             {
                                 icon: <FaInstagram/>
-                            }
-                        ].map((value, index) => {
-                            return <div key={index} className={"footer-icons"}>
-                                {value.icon}
+                            },
+                        ].map( (value, index) => {
+                            return<div key={index}>
+                               <IconButton>
+                                   {value.icon}
+                               </IconButton>
                             </div>
                         })
-
                     }
                 </div>
-
-
-            </div>
-            <div className={"caller"}>
-                <h3>Call us</h3>
-                <a href={"tel:1234567890"} className={"number"}>+91 1234567890</a>
             </div>
 
-
+            <div className={"footer-list"}>
+                {
+                    [
+                        {
+                            header:"Find product",
+                            list:<ul>
+                                <li>Smart mobiles</li>
+                                <li>Smart watches</li>
+                                <li>Unique laptops</li>
+                                <li>Electronics</li>
+                                <li>Automatic Screens</li>
+                            </ul>
+                        },
+                        {
+                            header:"Get help",
+                            list:<ul>
+                                <li>About us</li>
+                                <li>Contact us</li>
+                                <li>Return policy</li>
+                                <li>Privacy policy</li>
+                                <li>Payment policy</li>
+                            </ul>
+                        },
+                        {
+                            header:"About us",
+                            list:<ul>
+                                <li>News</li>
+                                <li>Service</li>
+                                <li>Our policy</li>
+                                <li>Customer care</li>
+                                <li>Faq's</li>
+                            </ul>
+                        },
+                    ].map( (value, index) => {
+                        return<div key={index}>
+                            <Typography variant={"h6"}>{value.header}</Typography>
+                            <div>{value.list}</div>
+                        </div>
+                    })
+                }
+            </div>
         </footer>
-        <div className={"line"}/>
-        <div className={"footer-bottom"}>
-
-            <p>@ {new Date().getFullYear()} Global Store. All rights reserved</p>
-            <div>
-                <p>PRIVACY POLICY</p>
-                <p>Terms & Conditions</p>
-            </div>
-        </div>
     </div>
 }

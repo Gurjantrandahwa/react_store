@@ -3,7 +3,7 @@ import {NavLink, useParams} from "react-router-dom";
 import {useProductContext} from "../../Common/Context/productContext";
 import "./singleProduct.scss";
 import {CircularProgress, Typography} from "@mui/material";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../Common/Helpers/FormatPrice";
 import {TbReplace, TbTruckDelivery} from "react-icons/tb";
 import {MdOutlineDeliveryDining, MdSecurity} from "react-icons/md";
 import Images from "../../Components/Images/Images";

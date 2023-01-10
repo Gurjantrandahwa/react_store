@@ -3,16 +3,19 @@ import HeroSection from "../../Components/HeroSection/HeroSection";
 import Features from "../../Components/Features/Features";
 import Brands from "../../Components/Brands/Brands";
 import FeatureProducts from "../../Components/FeatureProducts/FeatureProducts";
+import Customers from "../../Components/Customers/Customers";
+import PopularBrands from "../../Components/PopularBrands/PopularBrands";
 
 
 export default function Homepage() {
 
     return <div className={"homepage-wrapper"}>
-        <HeroSection />
+        <HeroSection/>
         <FeatureProducts/>
         <Features/>
         <Brands/>
-        <Homepage/>
+        <Customers/>
+        <PopularBrands/>
     </div>
 
 }

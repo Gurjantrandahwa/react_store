@@ -1,6 +1,6 @@
 import React from "react";
 import {IconButton, Typography} from "@mui/material";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../Common/Helpers/FormatPrice";
 import CartAmount from "../CartAmount/CartAmount";
 import {FaTrash} from "react-icons/fa";
 import {useCartContext} from "../../Common/Context/cart_context";

@@ -1,7 +1,7 @@
 import React from "react";
 import "./listView.scss";
 import {Button, Typography} from "@mui/material";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../Common/Helpers/FormatPrice";
 import {NavLink} from "react-router-dom";
 
 export default function ListView({products}) {

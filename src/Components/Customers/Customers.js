@@ -3,7 +3,7 @@ import "./Customers.scss";
 import {Typography} from "@mui/material";
 
 export default function Customers() {
-    return <div>
+    return <div className={"customer-wrapper"}>
         {
             [
                 {
@@ -15,8 +15,8 @@ export default function Customers() {
 
                 },
                 {
-                    image: "https://i.pinimg.com/564x/85/25/83/852583511c3109d7a4efa0c3a233be1e.jpg",
-                    name: "Savannah Nguyen",
+                    image: "https://i.pinimg.com/564x/f2/59/37/f2593750b80bb40b57d248b0a6f7ecc5.jpg",
+                    name: "Esther Howard",
                     description: "Lorem ipsum dolor sit amet consectetur. " +
                         "Nec sit enim tellus faucibus bibendum ullamcorper. " +
                         "Phasellus tristique aenean at lorem sed scelerisque.",
@@ -32,12 +32,12 @@ export default function Customers() {
                 },
 
             ].map((value, index) => {
-                return <div key={index}>
-                    <div>
+                return <div key={index} className={"customer-card"}>
+                    <div className={"customer-name"}>
                         <img src={value.image} alt={""}/>
                         <Typography>{value.name}</Typography>
                     </div>
-                    <div>
+                    <div className={"customer-description"}>
                         <Typography>
                             {value.description}
                         </Typography>

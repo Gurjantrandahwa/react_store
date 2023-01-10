@@ -1,0 +1,15 @@
+.popular-brands{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  background: #E2F4FF;
+  padding: 30px;
+  margin: 40px 30px;
+  justify-content: space-evenly;
+  img{
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+  }
+}

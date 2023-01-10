@@ -4,7 +4,7 @@ import "./cart.scss";
 import {Alert, Box, Button, Divider, Paper, Typography} from "@mui/material";
 import CartData from "../../Components/CartData/CartData";
 import {NavLink} from "react-router-dom";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../Common/Helpers/FormatPrice";
 
 export default function Cart() {
     const {cart, clearCart, total_price, shipping_fee} = useCartContext();

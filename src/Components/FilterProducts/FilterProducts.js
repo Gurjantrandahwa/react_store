@@ -3,7 +3,7 @@ import "./FilterProducts.scss";
 import {Button, TextField, Typography} from "@mui/material";
 import {useFilterContext} from "../../Common/Context/filter_context";
 import {FaCheck} from "react-icons/fa";
-import FormatPrice from "../../Helpers/FormatPrice";
+import FormatPrice from "../../Common/Helpers/FormatPrice";
 
 export default function FilterProducts() {
     const {
