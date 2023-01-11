@@ -19,11 +19,15 @@ export default function Cart() {
                 sx={{textTransform: "capitalize"}}
                 variant={"outlined"} severity={"warning"}
             >
-                No Items in cart click on the button for continuing shopping
+                No Items in your cart! click on the button for continue the shopping
             </Alert>
             <NavLink to={"/products"}>
-                <Button variant={"contained"} color={"secondary"}>
-                    Continue shopping
+                <Button
+                    sx={{padding:"10px 30px"}}
+                    className={"dialog-btns"}
+                    variant={"contained"}
+                        >
+                    Continue Shopping
                 </Button>
             </NavLink>
 

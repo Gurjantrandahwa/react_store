@@ -1,6 +1,7 @@
 import React from "react";
 import "./Features.scss";
 import {Button, Typography} from "@mui/material";
+import {NavLink} from "react-router-dom";
 
 export default function Features() {
     return <div className={"features-wrapper"}>
@@ -16,9 +17,12 @@ export default function Features() {
                 <Typography>
                     12 inch hd display
                 </Typography>
-                <Button>
-                    Shop now
-                </Button>
+                <NavLink to={"/products"}>
+                    <Button>
+                        Shop now
+                    </Button>
+                </NavLink>
+
             </figcaption>
         </figure>
 

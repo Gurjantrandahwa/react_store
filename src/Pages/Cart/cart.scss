@@ -127,7 +127,9 @@
         margin-bottom: 20px;
         border: 1px solid #DFDFDF;
         border-radius: 20px;
-display: flex;
+        display: flex;
+        padding: 5px;
+
         input {
           border: none;
           padding: 10px 15px;
@@ -135,7 +137,8 @@ display: flex;
           height: 44px;
           outline: none;
         }
-        button{
+
+        button {
           border: none;
           color: #003F62;
           font-family: 'Poppins', sans-serif;

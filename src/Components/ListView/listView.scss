@@ -1,16 +1,58 @@
 .list-view-card {
   border: 1px solid #151126;
   display: flex;
-  //flex-direction: column;
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 10px;
-  gap: 20px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  place-items: center;
+
+
+  img {
+    width: 300px;
+    padding: 20px;
+    object-fit: cover;
+    height: 200px;
+  }
 }
-.list-view-card-data{
-  max-width:400px ;
+
+.list-view-card-data {
+  max-width: 600px;
+
+
+  h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #003F62;
+    font-weight: 500;
+  }
+
+  h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #373737;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #4F4F4F;
+  }
+
+  button {
+    background-color: #EDA415;
+    width: 187px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 31px;
+    text-transform: none;
+    border-radius: 20px;
+
+  }
+
+  button:hover {
+    background-color: #003F62;
+  }
 }

@@ -12,31 +12,22 @@ export default function ListView({products}) {
         {
             products.map((value, index) => {
                 return <div className={"list-view-card"} key={index}>
-                    <figure>
-                        <img src={value.image} width={250} alt={value.name}/>
-                    </figure>
 
+                        <img src={value.image} alt={value.name}/>
                     <div className={"list-view-card-data"}>
-                        <Typography variant={"h5"}
-                                    sx={{
-                                        textTransform:"capitalize"
-                                    }}
-                                    color={"mediumvioletred"}>
-                            {value.name}
-                        </Typography>
-                        <Typography variant={"subtitle1"}>
-                            <FormatPrice price={value.price}/>
-                        </Typography>
 
-                        <Typography variant={"body2"} color={"slategray"}>
+                            <Typography variant={"h5"}>
+                                {value.name}
+                            </Typography>
+                            <Typography variant={"h6"} >
+                                <FormatPrice price={value.price}/>
+                            </Typography>
+
+                        <Typography>
                             {lengthOfDes(value?.description,100)}
                         </Typography>
                         <NavLink to={`/singleProduct/${value.id}`}>
-                            <Button variant={"outlined"}
-                            sx={{
-                                marginTop:"10px"
-                            }}
-                            >
+                            <Button variant={"contained"}>
                                 Read More
                             </Button>
                         </NavLink>
