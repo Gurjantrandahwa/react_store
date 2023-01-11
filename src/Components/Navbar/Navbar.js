@@ -49,8 +49,8 @@ export default function Navbar() {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={"/catalog"}>
-                    Catalog
+                <NavLink to={"/contact"}>
+                    Contact
                 </NavLink>
             </li>
             <li>
