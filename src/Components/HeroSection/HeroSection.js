@@ -6,9 +6,6 @@ import {Button} from "@mui/material";
 import {NavLink} from "react-router-dom";
 
 export default function HeroSection() {
-    const {featureProducts} = useProductContext();
-
-    console.log(featureProducts)
 
     const data = [
         {
@@ -34,14 +31,12 @@ export default function HeroSection() {
     //
     // }
 
-    return <div style={{
-        padding: "0 20px"
-    }}>
+    return <div>
 
         <Carousel
             data={data}
             time={5000}
-            width="1350px"
+            width="1400px"
             height="400px"
             // captionStyle={captionStyle}
             // captionPosition="bottom"
@@ -55,7 +50,7 @@ export default function HeroSection() {
             // thumbnailWidth="100px"
             style={{
                 textAlign: "center",
-                maxWidth: "1350px",
+                maxWidth: "1400px",
                 maxHeight: "500px",
                 margin: "auto"
             }}

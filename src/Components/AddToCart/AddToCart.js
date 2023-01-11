@@ -58,14 +58,18 @@ export default function AddToCart({product}) {
             <NavLink to={"/cart"}
                      onClick={() => addToCart(id, color, amount, product)}
             >
-                <Button>
+                <Button
+                variant={"contained"}
+                >
                     Add To cart
                 </Button>
             </NavLink>
             <NavLink to={"/cart"}
                      onClick={() => addToCart(id, color, amount, product)}
             >
-                <Button>
+                <Button
+                    variant={"contained"}
+                >
                    Buy it now
                 </Button>
             </NavLink>

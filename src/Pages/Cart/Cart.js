@@ -1,7 +1,7 @@
 import React from "react";
 import {useCartContext} from "../../Common/Context/cart_context";
 import "./cart.scss";
-import {Alert, Box, Button, Divider, Paper, Typography} from "@mui/material";
+import {Alert, Box, Button, Divider, Typography} from "@mui/material";
 import CartData from "../../Components/CartData/CartData";
 import {NavLink} from "react-router-dom";
 import FormatPrice from "../../Common/Helpers/FormatPrice";
@@ -29,82 +29,102 @@ export default function Cart() {
 
         </Box>
     }
-    return <div className={"container cart-container"}>
-        <div className={"cart-data"}>
-            {[
-                {name: "Name"},
-                {name: "Price"},
-                {name: "Quantity"},
-                {name: "Subtotal"},
-                {name: "Remove"}
-            ].map(((value, index) => {
-                return <Typography
-                    maxWidth={"100px"}
-                    variant={"h5"}
-                    key={index}
-                    color={"secondary"}>
-                    {value.name}
-                </Typography>
-            }))
-            }
+    return <div className={"cart-container"}>
+        <div className={"cart-data-wrapper"}>
+            <div className={"cart-header"}>
+                {[
+                    {name: "Product"},
+                    {name: "Price"},
+                    {name: "Quantity"},
+                    {name: "Subtotal"},
+                    {name: ""}
+                ].map(((value, index) => {
+                    return <Typography
 
-
-        </div>
-        <Divider variant={"fullWidth"} color={"primary"}
-                 sx={{margin: "20px"}}/>
-        <div style={{marginBottom: "50px"}}>
+                        variant={"h5"}
+                        key={index}
+                    >
+                        {value.name}
+                    </Typography>
+                }))
+                }
+            </div>
             {
                 cart.map((curElem) => {
                     return <CartData
                         key={curElem.id}
                         {...curElem}/>
                 })
+
+
             }
-        </div>
-        <Divider color={"secondary"} sx={{margin: "20px"}}/>
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexWrap: "wrap",
-                margin: "30px"
-            }}>
-            <NavLink to={"/products"}>
-                <Button variant={"contained"} color={"secondary"}>
-                    Continue shopping
+            <div className={"cart-buttons-wrapper"}>
+                <NavLink to={"/products"}>
+                    <Button variant={"contained"}
+                            className={"shopping-btn"}
+                    >
+                        Continue shopping
+                    </Button>
+                </NavLink>
+                <NavLink to={"/products"}>
+                    <Button variant={"outlined"}
+                            className={"update-btn"}
+                    >
+                        Update cart
+                    </Button>
+                </NavLink>
+                <Button
+                    className={"clear-btn"}
+                    onClick={() => clearCart()}
+                    variant={"outlined"}>
+                    Clear Cart
                 </Button>
-            </NavLink>
-            <Button
-                onClick={() => clearCart()}
-                variant={"contained"} color={"error"}>
-                Clear Cart
-            </Button>
-        </Box>
+            </div>
+        </div>
+        <div className={"cart-subtotal-data"}>
+            <div className={"cart-subtotal-data-header"}>
+                <Typography>Cart total</Typography>
+            </div>
+            <div className={"cart-subtotal"}>
+                <div className={"total-price"}>
+                    <Typography>
+                        Sub Total
+                    </Typography>
+                    <Typography>
+                        <FormatPrice price={total_price}/>
+                    </Typography>
+                </div>
+                {/*<Divider color={"#BDBDBD"}/>*/}
+                <div className={"total-price"}>
+                    <Typography>
+                        Shipping Fee
+                    </Typography>
+                    <Typography>
+                        <FormatPrice price={shipping_fee}/>
+                    </Typography>
 
-        <Box sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            margin: "40px"
-        }}>
-            <Paper sx={{
-                width: 250,
-                height: 150,
-                backgroundColor: "lightgrey",
-                color: "black",
-                padding: "20px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "10px"
-            }}>
-                <Typography variant={"body1"}>Sub Total: <FormatPrice price={total_price}/></Typography>
-                <Typography variant={"body1"}>Shipping Fee: <FormatPrice price={shipping_fee}/></Typography>
+                </div>
+                <div className={"coupon-input"}>
+                    <input
+                        placeholder={"Enter coupon code"}
+                    />
+                    <Button>Apply</Button>
+                </div>
+                <Divider color={"#BDBDBD"}/>
+                <div className={"total-amount"}>
+                    <Typography>
+                         Total amount
+                    </Typography>
+                    <Typography>
+                        <FormatPrice price={shipping_fee + total_price}/>
+                    </Typography>
+                </div>
+                <Divider color={"#BDBDBD"}/>
+                <Button className={"checkout-btn"}>Proceed to checkout</Button>
+            </div>
 
-                <Divider variant={"fullWidth"} color={"secondary"}/>
-                <Typography variant={"body1"}>Order Total:
-                    <FormatPrice price={shipping_fee + total_price}/></Typography>
 
-            </Paper>
-        </Box>
+        </div>
 
     </div>
 }

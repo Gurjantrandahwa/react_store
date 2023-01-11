@@ -1,10 +1,9 @@
 .product-header {
-
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  flex-wrap: wrap;
 
   .icon-button-h {
     margin-left: 20px;
@@ -41,7 +40,7 @@
       color: white;
 
       option {
-        cursor: pointer!important;
+        cursor: pointer !important;
       }
 
     }

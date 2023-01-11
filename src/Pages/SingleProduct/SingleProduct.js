@@ -2,35 +2,46 @@ import React, {useEffect, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import {useProductContext} from "../../Common/Context/productContext";
 import "./singleProduct.scss";
-import {Button, CircularProgress, Divider, Typography} from "@mui/material";
+import {
+    Button,
+    CircularProgress,
+    Dialog, DialogActions,
+    DialogContentText,
+    DialogTitle,
+    Divider,
+    IconButton, TextField,
+    Typography
+} from "@mui/material";
 import FormatPrice from "../../Common/Helpers/FormatPrice";
 import ProductImages from "../../Components/ProductImages/ProductImages";
 import Rating from "../../Components/Rating/Rating";
 import AddToCart from "../../Components/AddToCart/AddToCart";
 import {ChevronRight} from "@mui/icons-material";
-import {AiOutlineCheck} from "react-icons/ai";
+import {AiOutlineCheck, AiOutlineClose} from "react-icons/ai";
+import FeatureProducts from "../../Components/FeatureProducts/FeatureProducts";
 
 export default function SingleProduct() {
     const {getSingleProduct, isLoading, singleProduct} = useProductContext();
-    const [desc,setDescr]=useState(false)
+    const [desc, setDescr] = useState(false);
     const API = "https://api.pujakaitem.com/api/products";
     const {id} = useParams();
+    const [open, setOpen] = useState(false);
+    const [review, setReview] = useState(false)
+    const [writeReview, setWriteReview] = useState("")
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     useEffect(() => {
         getSingleProduct(`${API}?id=${id}`);
     }, []);
-    const {
-        name,
-        company,
-        price,
-        description,
-        category,
-        stock,
-        stars,
-        reviews,
-        image
-    } = singleProduct;
 
+
+    const {name, company, price, description, category, stock, stars, reviews, image} = singleProduct;
     if (isLoading) {
         return <div className={"loader"}>
             <CircularProgress color="secondary"/>
@@ -44,89 +55,160 @@ export default function SingleProduct() {
             <Typography>{name}</Typography>
             <ChevronRight/>
         </div>
-
-        <div className={"single-product-wrapper"}>
-            <div>
-                <ProductImages images={image}/>
-            </div>
-
-            {/*Text*/}
-            <div>
-                <div className={"product-name-wrapper"}>
-                    <Typography variant={"h5"}>
-                        {name}
-                    </Typography>
-                    <Typography>
-                        <FormatPrice price={price}/>
-                    </Typography>
-                </div>
-                <div className={"rating-wrapper"}>
-                    <Rating stars={stars}/>
-                    <Typography> {reviews} customer reviews</Typography>
+        <div className={"single-p-container"}>
+            <div className={"single-product-wrapper"}>
+                <div>
+                    <ProductImages images={image}/>
                 </div>
 
-                <div className={"stock"}>
-                    <Typography>
-                        Availability :
-                    </Typography>
-                    <div className={"stock-check"}>
-                        {stock > 0 ? <AiOutlineCheck/> : null}
-                        {stock > 0 ? "In stock" : "Not Available"}
-
-                    </div>
-                </div>
-                <Typography className={"stock-length"}>
-                    Hurry up! only {stock} product left in stock!
-                </Typography>
-
-                <Divider color={"#BDBDBD"}/>
-                {
-                    stock > 0 && <AddToCart product={singleProduct}/>
-                }
-                <Divider color={"#BDBDBD"}/>
-                <div className={"company-wrapper"}>
-                    <div>
+                {/*Text*/}
+                <div>
+                    <div className={"product-name-wrapper"}>
                         <Typography variant={"h5"}>
-                            Category :
+                            {name}
                         </Typography>
                         <Typography>
-                            {category}
+                            <FormatPrice price={price}/>
                         </Typography>
                     </div>
-                    <div>
-                        <Typography variant={"h5"}>
-                            Company :
-                        </Typography>
-                        <Typography> {company}</Typography>
+                    <div className={"rating-wrapper"}>
+                        <Rating stars={stars}/>
+                        <Typography> {reviews} customer reviews</Typography>
                     </div>
 
+                    <div className={"stock"}>
+                        <Typography>
+                            Availability :
+                        </Typography>
+                        <div className={"stock-check"}>
+                            {stock > 0 ? <AiOutlineCheck/> : null}
+                            {stock > 0 ? "In Stock" : "Not Available"}
+
+                        </div>
+                    </div>
+                    <Typography className={"stock-length"}>
+                        Hurry up! only {stock} product left in stock!
+                    </Typography>
+
+                    <Divider color={"#BDBDBD"}/>
+                    {
+                        stock > 0 && <AddToCart product={singleProduct}/>
+                    }
+                    <Divider color={"#BDBDBD"}/>
+                    <div className={"company-wrapper"}>
+                        <div>
+                            <Typography variant={"h5"}>
+                                Category :
+                            </Typography>
+                            <Typography>
+                                {category}
+                            </Typography>
+                        </div>
+                        <div>
+                            <Typography variant={"h5"}>
+                                Company :
+                            </Typography>
+                            <Typography> {company}</Typography>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
+            <div className={"description-wrapper-buttons"}>
+
+                <Button
+                    variant={"outlined"}
+                    onClick={() => {
+                        setDescr(true)
+                    }}
+                    className={"des-btn"}
+                >
+                    Description
+                </Button>
+                <Button
+                    onClick={() => setReview(true)}
+                    variant={"contained"}
+                    className={"review-btn"}
+                >
+                    Reviews
+                </Button>
+
+
+            </div>
+
+            {
+                desc &&
+                <div className={"desc-wrapper"}>
+                    <IconButton
+
+                        onClick={() => setDescr(false)}
+                    >
+                        <AiOutlineClose/>
+                    </IconButton>
+                    <p>{description}</p>
+                </div>
+            }
+            {
+                review &&
+                <div className={"reviews-container"}>
+                    <Typography variant={"h5"}>
+                        Customer reviews
+                    </Typography>
+
+
+                    <Typography>
+                        {writeReview.length > 1 ? writeReview : "No reviews yet"}
+
+                    </Typography>
+
+
+                    <Button
+                        onClick={handleClickOpen}
+                        variant={"contained"}
+                    >
+                        Write a review
+                    </Button>
+                    <IconButton
+                        className={"review-close"}
+                        onClick={() => setReview(false)}
+                    >
+                        <AiOutlineClose/>
+                    </IconButton>
+                </div>
+            }
 
         </div>
-        <div className={"description-wrapper-buttons"}>
+        <Dialog open={open} onClose={handleClose}>
+            <DialogTitle>Reviews</DialogTitle>
+            <DialogContentText sx={{padding: "20px"}}>
+                To review to this product, please enter your review here.
 
-            <Button
-                onClick={()=>{setDescr(true)}}
-                className={"des-btn"}
-            >
-                Description
-            </Button>
-            <Button
-                className={"review-btn"}
-            >
-                Reviews
-            </Button>
-
-
-        </div>
-        {
-            desc &&
-            <Typography variant={"body2"}>{description}</Typography>
-        }
-
-
+                <TextField
+                    autoFocus
+                    margin="dense"
+                    label="Review"
+                    type="text"
+                    fullWidth
+                    variant="standard"
+                    value={writeReview}
+                    onChange={(e) => setWriteReview(e.target.value)}
+                />
+            </DialogContentText>
+            <DialogActions>
+                <Button
+                    onClick={handleClose}
+                    className={"dialog-btns"}
+                >
+                    Cancel
+                </Button>
+                <Button
+                    onClick={handleClose}
+                    className={"dialog-btns"}>
+                    Review
+                </Button>
+            </DialogActions>
+        </Dialog>
+<FeatureProducts/>
     </div>
 }

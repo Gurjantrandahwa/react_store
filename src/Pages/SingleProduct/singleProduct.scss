@@ -20,144 +20,228 @@
   }
 }
 
-
-.single-product-wrapper {
+.single-p-container {
   margin: 40px;
-  display: flex;
-  gap: 30px;
 
-  .product-name-wrapper {
-    //width: 50%;
-    h5 {
-      color: #003F62;
-      text-transform: capitalize;
-      font-weight: 500;
-      font-size: 29.6765px;
-      line-height: 45px;
-    }
+  .single-product-wrapper {
 
-    p {
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 45px;
-      color: #4A4A4A;
-      font-family: 'Poppins', sans-serif;
-    }
-  }
-
-  .rating-wrapper {
     display: flex;
-    gap: 10px;
-    align-items: center;
+    gap: 30px;
 
-    p {
-      color: #4A4A4A;
-      font-weight: 500;
-      font-size: 13.1922px;
-      font-family: 'Poppins', sans-serif;
-      text-transform: capitalize;
-    }
-  }
+    .product-name-wrapper {
+      //width: 50%;
+      h5 {
+        color: #003F62;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 29.6765px;
+        line-height: 45px;
+      }
 
-  .stock {
-    margin-top: 10px;
-    display: flex;
-    gap: 20px;
-
-    p {
-      font-weight: 500;
-      font-size: 18.1725px;
-      line-height: 27px;
-      color: #232323;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .stock-check {
-      color: #30BD57;
-      font-weight: 500;
-      font-size: 18.1725px;
-      line-height: 27px;
-      display: flex;
-      align-items: center;
-
-      svg {
-        margin-right: 7px;
+      p {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 45px;
+        color: #4A4A4A;
+        font-family: 'Poppins', sans-serif;
       }
     }
-  }
 
-  .stock-length {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    color: #5D5D5D;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-
-  .company-wrapper {
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    div {
+    .rating-wrapper {
       display: flex;
+      gap: 10px;
       align-items: center;
+
+      p {
+        color: #4A4A4A;
+        font-weight: 500;
+        font-size: 13.1922px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: capitalize;
+      }
     }
 
-    h5 {
-      color: #232323;
-      font-weight: 500;
-      font-size: 18.1725px;
-      line-height: 27px;
-      font-family: 'Poppins', sans-serif;
+    .stock {
+      margin-top: 10px;
+      display: flex;
+      gap: 20px;
 
+      p {
+        font-weight: 500;
+        font-size: 18.1725px;
+        line-height: 27px;
+        color: #232323;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .stock-check {
+        color: #30BD57;
+        font-weight: 500;
+        font-size: 18.1725px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 7px;
+        }
+      }
+    }
+
+    .stock-length {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: #5D5D5D;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .company-wrapper {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      h5 {
+        color: #232323;
+        font-weight: 500;
+        font-size: 18.1725px;
+        line-height: 27px;
+        font-family: 'Poppins', sans-serif;
+
+      }
+
+      p {
+        color: #434343;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  .description-wrapper-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto;
+
+    .des-btn {
+      border: 1px solid #8F8F8F;
+      border-radius: 20px;
+      width: 187px;
+      height: 60px;
+      font-family: 'Poppins', sans-serif;
+      color: #373737;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 31px;
+      text-transform: none;
+    }
+
+    .review-btn {
+      border-radius: 20px;
+      width: 187px;
+      height: 60px;
+      font-family: 'Poppins', sans-serif;
+      background: #003F62;
+      font-size: 18px;
+      line-height: 31px;
+      text-transform: none;
+      color: white;
+    }
+  }
+
+  .desc-wrapper {
+    border: 1px solid #B8B8B8;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s linear;
+
+    button {
+      border: none;
+      position: absolute;
+      right: 6px;
+      top: 1px;
+      font-size: 14px;
+      color: white;
+      background-color: #EDA415;
     }
 
     p {
-      color: #434343;
-      text-transform: capitalize;
+      color: #4F4F4F;
       font-weight: 400;
-      font-size: 13px;
-      line-height: 20px;
-      margin-left: 10px;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  .reviews-container {
+    border: 1px solid #B8B8B8;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+
+    h5 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 22.68px;
+      line-height: 34px;
+      font-family: 'Poppins', sans-serif;
+      color: #003F62;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #4F4F4F;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 30px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    button {
+      background-color: #003F62;
+      border-radius: 0;
+      text-transform: none;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    .review-close {
+      position: absolute;
+      top: 1px;
+      right: 6px;
+      font-size: 14px;
+      color: white;
+      border-radius: 50%;
+      background-color: #EDA415;
     }
   }
 
 }
 
-.description-wrapper-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin: 30px auto;
-
-  .des-btn {
-    border: 1px solid #8F8F8F;
-    border-radius: 20px;
-    width: 187px;
-    height: 60px;
-    font-family: 'Poppins', sans-serif;
-    color: #373737;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 31px;
-    text-transform: none;
-  }
-
-  .review-btn {
-    border-radius: 20px;
-    width: 187px;
-    height: 60px;
-    font-family: 'Poppins', sans-serif;
-    background: #003F62;
-    font-size: 18px;
-    line-height: 31px;
-    text-transform: none;
-    color: white;
-  }
+.dialog-btns {
+  background-color: #003F62 !important;
+  text-transform: none!important;
+  color: white!important;
+  border-radius: 0!important;
 }
