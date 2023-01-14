@@ -5,6 +5,7 @@ import {Typography} from "@mui/material";
 import {FiMapPin} from "react-icons/fi";
 import {BsTruck} from "react-icons/bs";
 import Search from "../Search/Search";
+import {NavLink} from "react-router-dom";
 
 export default function Header() {
     return<div>
@@ -22,7 +23,7 @@ export default function Header() {
                     [
                         {
                             icon: <FiMapPin/>,
-                            detail: "Our Store"
+                            detail: <NavLink to={"/contact"}>Our Store</NavLink>
                         },
                         {
                             icon: <BsTruck/>,

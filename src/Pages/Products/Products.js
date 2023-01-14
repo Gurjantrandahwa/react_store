@@ -5,7 +5,7 @@ import ProductHeader from "../../Components/ProductHeader/ProductHeader";
 import ProductList from "../../Components/ProductList/ProductList";
 import {ChevronRight} from "@mui/icons-material";
 import {Typography} from "@mui/material";
-import Features from "../../Components/Features/Features";
+import Banner from "../../Components/Banner/Banner";
 
 export default function Products() {
 
@@ -39,6 +39,6 @@ export default function Products() {
                 </div>
             </div>
         </div>
-        <Features/>
+        <Banner/>
     </div>
 }

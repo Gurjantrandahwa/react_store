@@ -28,7 +28,7 @@ export default function Search() {
         <div className={"search"}>
             <form onSubmit={(e) => e.preventDefault()}>
                 <input
-                    placeholder={"Search any things"}
+                    placeholder={"Search any product"}
                     type={"text"}
                     name={"text"}
                     value={text}
@@ -50,7 +50,8 @@ export default function Search() {
 
                 <Button
                     startIcon={<BsPerson/>}
-                    onClick={() => loginWithRedirect()}>Log in
+                    onClick={() => loginWithRedirect()}>
+                    Log in
                 </Button>
             }
             <NavLink to={"/cart"}>

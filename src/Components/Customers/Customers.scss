@@ -4,8 +4,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin: 50px 30px;
+  gap: 15px;
+  margin: 50px 20px;
+  flex-wrap: wrap;
 
   .customer-card {
     display: flex;
@@ -14,7 +15,7 @@
     align-items: flex-start;
     padding: 0 0 0 16px;
     gap: 26.17px;
-    width: 432px;
+    width: 350px;
     height: 242px;
     border: 1px solid #BABABA;
     border-radius: 20px;
@@ -47,10 +48,9 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 375px;
-      height: 82px;
       background: #E2F4FF;
       border-radius: 18.695px;
+      margin-right: 10px;
 
       p {
         color: #003F62;

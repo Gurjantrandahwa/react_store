@@ -1,9 +1,7 @@
 import React from "react";
 import "./heroSection.scss";
-import {useProductContext} from "../../Common/Context/productContext";
 import {Carousel} from 'react-carousel-minimal';
-import {Button} from "@mui/material";
-import {NavLink} from "react-router-dom";
+
 
 export default function HeroSection() {
 

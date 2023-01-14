@@ -181,34 +181,43 @@ export default function SingleProduct() {
         </div>
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>Reviews</DialogTitle>
-            <DialogContentText sx={{padding: "20px"}}>
-                To review to this product, please enter your review here.
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault()
+                }
+                }>
+                <DialogContentText sx={{padding: "20px"}}>
+                    To review to this product, please enter your review here.
 
-                <TextField
-                    autoFocus
-                    margin="dense"
-                    label="Review"
-                    type="text"
-                    fullWidth
-                    variant="standard"
-                    value={writeReview}
-                    onChange={(e) => setWriteReview(e.target.value)}
-                />
-            </DialogContentText>
-            <DialogActions>
-                <Button
-                    onClick={handleClose}
-                    className={"dialog-btns"}
-                >
-                    Cancel
-                </Button>
-                <Button
-                    onClick={handleClose}
-                    className={"dialog-btns"}>
-                    Review
-                </Button>
-            </DialogActions>
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        label="Review"
+                        type="text"
+                        fullWidth
+                        variant="standard"
+                        value={writeReview}
+                        onChange={(e) => setWriteReview(e.target.value)}
+                    />
+
+
+                </DialogContentText>
+                <DialogActions>
+                    <Button
+                        onClick={handleClose}
+                        className={"dialog-btns"}
+                    >
+                        Cancel
+                    </Button>
+                    <Button
+                        type={"submit"}
+                        onClick={handleClose}
+                        className={"dialog-btns"}>
+                        Review
+                    </Button>
+                </DialogActions>
+            </form>
         </Dialog>
-<FeatureProducts/>
+        <FeatureProducts/>
     </div>
 }
