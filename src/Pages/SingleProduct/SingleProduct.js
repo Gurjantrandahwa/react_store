@@ -26,8 +26,30 @@ export default function SingleProduct() {
     const API = "https://api.pujakaitem.com/api/products";
     const {id} = useParams();
     const [open, setOpen] = useState(false);
-    const [review, setReview] = useState(false)
-    const [writeReview, setWriteReview] = useState("")
+    const [reviewDialog, setReviewDialog] = useState(false)
+    const [writeReview, setWriteReview] = useState({
+        review: ""
+    })
+    const [form, setForm] = useState({
+        review: ""
+    });
+    const [submit, submitted] = useState(false);
+
+    const printValues = e => {
+        e.preventDefault();
+        setForm({
+            review: writeReview.review,
+
+        });
+        submitted(true);
+    };
+
+    const updateField = e => {
+        setWriteReview({
+            ...writeReview,
+            [e.target.name]: e.target.value
+        });
+    };
     const handleClickOpen = () => {
         setOpen(true);
     };
@@ -127,7 +149,7 @@ export default function SingleProduct() {
                     Description
                 </Button>
                 <Button
-                    onClick={() => setReview(true)}
+                    onClick={() => setReviewDialog(true)}
                     variant={"contained"}
                     className={"review-btn"}
                 >
@@ -150,7 +172,7 @@ export default function SingleProduct() {
                 </div>
             }
             {
-                review &&
+                reviewDialog &&
                 <div className={"reviews-container"}>
                     <Typography variant={"h5"}>
                         Customer reviews
@@ -158,7 +180,8 @@ export default function SingleProduct() {
 
 
                     <Typography>
-                        {writeReview.length > 1 ? writeReview : "No reviews yet"}
+                        {submit ? form.review : null        }
+                        {/*{writeReview.length > 1 ? submit? form.review : null : "No reviews yet"}*/}
 
                     </Typography>
 
@@ -171,7 +194,7 @@ export default function SingleProduct() {
                     </Button>
                     <IconButton
                         className={"review-close"}
-                        onClick={() => setReview(false)}
+                        onClick={() => setReviewDialog(false)}
                     >
                         <AiOutlineClose/>
                     </IconButton>
@@ -181,23 +204,20 @@ export default function SingleProduct() {
         </div>
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>Reviews</DialogTitle>
-            <form
-                onSubmit={(e) => {
-                    e.preventDefault()
-                }
-                }>
+            <form onSubmit={printValues}>
                 <DialogContentText sx={{padding: "20px"}}>
                     To review to this product, please enter your review here.
 
                     <TextField
                         autoFocus
                         margin="dense"
+                        name={"review"}
                         label="Review"
                         type="text"
                         fullWidth
-                        variant="standard"
-                        value={writeReview}
-                        onChange={(e) => setWriteReview(e.target.value)}
+                        variant="outlined"
+                        value={writeReview.review}
+                        onChange={updateField}
                     />
 
 
